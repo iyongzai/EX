@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F36ACEF2143E723003DB8E0 /* 扩展String介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACEE2143E723003DB8E0 /* 扩展String介绍.txt */; };
+		2F36ACF72143E992003DB8E0 /* 扩展Color介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF02143E991003DB8E0 /* 扩展Color介绍.txt */; };
+		2F36ACF82143E992003DB8E0 /* 扩展UIView介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF12143E991003DB8E0 /* 扩展UIView介绍.txt */; };
+		2F36ACF92143E992003DB8E0 /* 扩展Array介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF22143E991003DB8E0 /* 扩展Array介绍.txt */; };
+		2F36ACFA2143E992003DB8E0 /* 扩展Double介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF32143E991003DB8E0 /* 扩展Double介绍.txt */; };
+		2F36ACFB2143E992003DB8E0 /* 扩展UINavigationBar介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF42143E992003DB8E0 /* 扩展UINavigationBar介绍.txt */; };
+		2F36ACFC2143E992003DB8E0 /* 扩展UIImage介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF52143E992003DB8E0 /* 扩展UIImage介绍.txt */; };
+		2F36ACFD2143E992003DB8E0 /* 扩展UITextField介绍.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F36ACF62143E992003DB8E0 /* 扩展UITextField介绍.txt */; };
+		2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36ACFE2143EA33003DB8E0 /* DescViewController.swift */; };
 		2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FA821436C2F0096E546 /* AppDelegate.swift */; };
 		2FB26FAB21436C2F0096E546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FAA21436C2F0096E546 /* ViewController.swift */; };
 		2FB26FAE21436C2F0096E546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FAC21436C2F0096E546 /* Main.storyboard */; };
@@ -20,11 +29,21 @@
 		2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC2214376680096E546 /* Extension-UIView.swift */; };
 		2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC5214376680096E546 /* Extension-UITextField.swift */; };
 		2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FD12143789F0096E546 /* Extension-Array.swift */; };
+		2FB26FF12143D8100096E546 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FB421436C320096E546 /* Info.plist */; };
 		7ACAC0A674E892A985721ED6 /* Pods_EXDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3279FBE1C0ADF15EF6364C9C /* Pods_EXDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21F26148F769DA9FB35AFF17 /* Pods-EXDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2F36ACEE2143E723003DB8E0 /* 扩展String介绍.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "扩展String介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF02143E991003DB8E0 /* 扩展Color介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展Color介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF12143E991003DB8E0 /* 扩展UIView介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展UIView介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF22143E991003DB8E0 /* 扩展Array介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展Array介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF32143E991003DB8E0 /* 扩展Double介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展Double介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF42143E992003DB8E0 /* 扩展UINavigationBar介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展UINavigationBar介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF52143E992003DB8E0 /* 扩展UIImage介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展UIImage介绍.txt"; sourceTree = "<group>"; };
+		2F36ACF62143E992003DB8E0 /* 扩展UITextField介绍.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展UITextField介绍.txt"; sourceTree = "<group>"; };
+		2F36ACFE2143EA33003DB8E0 /* DescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescViewController.swift; sourceTree = "<group>"; };
 		2FB26FA521436C2F0096E546 /* EXDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB26FA821436C2F0096E546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB26FAA21436C2F0096E546 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +99,19 @@
 			children = (
 				2FB26FA821436C2F0096E546 /* AppDelegate.swift */,
 				2FB26FAA21436C2F0096E546 /* ViewController.swift */,
+				2F36ACFE2143EA33003DB8E0 /* DescViewController.swift */,
 				2FB26FAC21436C2F0096E546 /* Main.storyboard */,
 				2FB26FAF21436C320096E546 /* Assets.xcassets */,
 				2FB26FB121436C320096E546 /* LaunchScreen.storyboard */,
 				2FB26FB421436C320096E546 /* Info.plist */,
+				2F36ACEE2143E723003DB8E0 /* 扩展String介绍.txt */,
+				2F36ACF22143E991003DB8E0 /* 扩展Array介绍.txt */,
+				2F36ACF02143E991003DB8E0 /* 扩展Color介绍.txt */,
+				2F36ACF32143E991003DB8E0 /* 扩展Double介绍.txt */,
+				2F36ACF52143E992003DB8E0 /* 扩展UIImage介绍.txt */,
+				2F36ACF42143E992003DB8E0 /* 扩展UINavigationBar介绍.txt */,
+				2F36ACF62143E992003DB8E0 /* 扩展UITextField介绍.txt */,
+				2F36ACF12143E991003DB8E0 /* 扩展UIView介绍.txt */,
 			);
 			path = EXDemo;
 			sourceTree = "<group>";
@@ -181,9 +209,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F36ACF92143E992003DB8E0 /* 扩展Array介绍.txt in Resources */,
+				2FB26FF12143D8100096E546 /* Info.plist in Resources */,
 				2FB26FB321436C320096E546 /* LaunchScreen.storyboard in Resources */,
+				2F36ACF72143E992003DB8E0 /* 扩展Color介绍.txt in Resources */,
 				2FB26FB021436C320096E546 /* Assets.xcassets in Resources */,
+				2F36ACEF2143E723003DB8E0 /* 扩展String介绍.txt in Resources */,
+				2F36ACFB2143E992003DB8E0 /* 扩展UINavigationBar介绍.txt in Resources */,
 				2FB26FAE21436C2F0096E546 /* Main.storyboard in Resources */,
+				2F36ACFC2143E992003DB8E0 /* 扩展UIImage介绍.txt in Resources */,
+				2F36ACF82143E992003DB8E0 /* 扩展UIView介绍.txt in Resources */,
+				2F36ACFD2143E992003DB8E0 /* 扩展UITextField介绍.txt in Resources */,
+				2F36ACFA2143E992003DB8E0 /* 扩展Double介绍.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,15 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -217,15 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EXDemo-checkManifestLockResult.txt",
 			);
@@ -249,6 +278,7 @@
 				2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */,
 				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
 				2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */,
+				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
 				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
 				2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */,
 			);
@@ -396,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDDHMJN7C8;
 				INFOPLIST_FILE = EXDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -415,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDDHMJN7C8;
 				INFOPLIST_FILE = EXDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

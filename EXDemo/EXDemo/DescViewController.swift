@@ -9,11 +9,25 @@
 import UIKit
 
 class DescViewController: UIViewController {
+    
+    fileprivate lazy var textView: UITextView = {
+        let textView = UITextView()
+        textView.isEditable = false
+        
+        
+        return textView
+    }()
+    
+    var fileName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.addSubviews()
+        self.addConstraints()
+        self.adjustUI()
+        
+        self.loadContent()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +36,30 @@ class DescViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func loadContent() {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: nil), let content = try? String.init(contentsOfFile: filePath) {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.minimumLineHeight = 20
+            let attr = NSAttributedString.init(string: content, attributes: [NSAttributedStringKey.font : UIFont.init(name: "PingFangSC-Medium", size: 14)!, NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.paragraphStyle : paragraphStyle])
+            textView.attributedText = attr
+        }
+        
     }
-    */
+}
 
+
+extension DescViewController: UI {
+    func addSubviews() {
+        self.view.addSubview(textView)
+    }
+    func addConstraints() {
+        textView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    func adjustUI() {
+        self.navigationItem.title = fileName
+        self.view.backgroundColor = UIColor.viewBG
+        textView.backgroundColor = UIColor.clear
+    }
 }
