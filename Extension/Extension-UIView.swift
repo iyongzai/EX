@@ -45,6 +45,7 @@ extension UIView {
 
 // MARK: - 扩展toast功能：上面图片，下面文字
 extension UIView {
+    // MARK: - 扩展toast功能：上面图片，下面文字
     func makeToast(_ topImg: UIImage, bottomMSG: String) {
         let toast = UIView()
         toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
@@ -164,6 +165,7 @@ extension UIView {
 
 
 extension UIView {
+    // MARK: - 快捷生成一个渐变layer
     static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
         let caGradientLayer = CAGradientLayer()
         caGradientLayer.frame = frame
@@ -174,6 +176,7 @@ extension UIView {
         return caGradientLayer
     }
     
+    // MARK: - 底层添加一个同样大小，位置一样的渐变背景
     func addGradientBG() {
         let _ = self.addGradientBGThenReturnIt()
     }

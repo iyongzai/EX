@@ -12,7 +12,7 @@ import UIKit
 
 //MARK: 第一种方式是给String添加扩展
 extension String {
-    /// 将十六进制颜色转换为UIColor
+    // MARK: - 将十六进制颜色转换为UIColor
     func uiColor() -> UIColor {
         
         var hexColorString = self
@@ -98,6 +98,7 @@ extension String {
 
 // MARK: - 随机颜色
 extension UIColor {
+    // MARK: - 随机颜色
     class func randColor() -> UIColor {
         return UIColor.init(red: CGFloat(arc4random()%(256-124)+124)/255.0, green: CGFloat(arc4random()%(256-124)+124)/255.0, blue: CGFloat(arc4random()%(256-124)+124)/255.0, alpha: 1)
     }

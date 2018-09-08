@@ -190,7 +190,7 @@ extension String {
 
 
 extension String {
-    //MARK: - 判断时候是图片名称(暂时只加入了几个常用的格式，待扩展)
+    //MARK: - 判断是否是图片名称(暂时只加入了几个常用的格式，待扩展)
     func isPicName() -> Bool {
         return self.validate(rule: "^(.+?)\\.(png|jpg|jpeg|gif)$")
     }

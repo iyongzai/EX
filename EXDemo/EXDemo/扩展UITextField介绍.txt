@@ -1,0 +1,67 @@
+
+// MARK: - 返回String的长度length
+var length: Int {return self.count}
+
+
+
+// MARK: - 正则
+// MARK: - 正则大陆手机号码
+func isTelNumber() -> Bool
+
+// MARK: - 正则验证通用方法,rule为正则
+func validate(rule: String) -> Bool
+
+// MARK: - 邮箱验证
+func validateEmail() -> Bool
+
+// MARK: - 密码验证（密码为8~20位，必须包括字母数字）
+func validatePassword() -> Bool
+
+
+
+// MARK: - 汉字处理
+// MARK: - 汉字 -> 拼音
+func chineseToPinyin() -> String
+
+// MARK: - 判断是否含有中文
+func isIncludeChineseIn() -> Bool
+
+// MARK: - 获取第一个字符
+func first() -> String
+
+
+
+// MARK: - 根据开始位置和长度截取字符串
+func subString(start:Int, length:Int = -1) -> String
+// MARK: - 强制指定需要多少位小数，不够小数位的补0（方法支持到20位小数，常用够用了，如需更多位小数请自行修改）
+func forceDecimalDigits(_ digits: Int) -> String
+
+
+// MARK: - 隐藏部分内容，用*代替(常用场景：银行卡，手机号，证件号码等)
+func secureText(location: Int, length: Int) -> String
+
+// MARK: - 指定多少位字符在一起，后面空格间隔开（常用场景：4位放一起的银行卡号）
+func togetherLength(_ length: Int) -> String
+
+// MARK: - 银行卡号显示前后各3位，中间部分隐藏，然后从前到后4位放一起，空格间隔开
+func bankCardSecureText() -> String
+
+
+//MARK: - Range转换为NSRange
+func nsRange(from range: Range<String.Index>) -> NSRange?
+
+//MARK: - Range转换为NSRange
+func range(from nsRange: NSRange) -> Range<String.Index>?
+
+
+//MARK: - 判断是否是图片名称(暂时只加入了几个常用的格式，待扩展)
+func isPicName() -> Bool
+
+//MARK: - htmlString修改img，video等标签的宽高
+///
+/// - Parameters:
+///   - elem: img, video；注意：传参不需要带"<"字符，否则可能得不到预期结果
+///   - width: 绝对值如375,或者图片百分比如100%
+///   - height: 跟width类似
+/// - Returns: 修改后的结果
+func htmlStringElements(_ elem: String, width: String? = nil, height: String? = nil) -> String
