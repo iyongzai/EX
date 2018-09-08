@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-//import SnapKit
+import SnapKit
 
 extension UIView {
     //MARK: - 给view添加圆角
@@ -45,43 +45,42 @@ extension UIView {
 
 // MARK: - 扩展toast功能：上面图片，下面文字
 extension UIView {
-//    func makeToast(_ topImg: UIImage, bottomMSG: String) {
-//        let toast = UIView()
-//        toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-//        toast.ayCornerRadius = 10
-//        self.addSubview(toast)
-//        toast.snp.makeConstraints { (make) in
-//            make.size.equalTo(CGSize.init(width: 125, height: 100))
-//            make.centerX.equalTo(self)
-//            make.centerY.equalTo(self).offset(-50)
-//        }
-//        let label = UILabel()
-//        label.text = bottomMSG
-//        //label.font = UIFont.init(name: "PingFangSC-Medium", size: 15)
-//        label.font = UIFont.init(name: themeFontName, size: 15)
-//        label.textColor = UIColor.white
-//        label.textAlignment = .center
-//        toast.addSubview(label)
-//        label.snp.makeConstraints { (make) in
-//            make.left.right.equalTo(0)
-//            make.bottom.equalTo(-15)
-//            make.height.equalTo(20)
-//        }
-//        
-//        let imgView = UIImageView()
-//        imgView.image = topImg
-//        imgView.contentMode = .center
-//        toast.addSubview(imgView)
-//        imgView.snp.makeConstraints { (make) in
-//            make.top.equalTo(0)
-//            make.left.right.equalTo(0)
-//            make.bottom.equalTo(label.snp.top)
-//        }
-//        
-//        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
-//            toast.removeFromSuperview()
-//        }
-//    }
+    func makeToast(_ topImg: UIImage, bottomMSG: String) {
+        let toast = UIView()
+        toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+        toast.ayCornerRadius = 10
+        self.addSubview(toast)
+        toast.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize.init(width: 125, height: 100))
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self).offset(-50)
+        }
+        let label = UILabel()
+        label.text = bottomMSG
+        label.font = UIFont.init(name: "PingFangSC-Medium", size: 15)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        toast.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(-15)
+            make.height.equalTo(20)
+        }
+        
+        let imgView = UIImageView()
+        imgView.image = topImg
+        imgView.contentMode = .center
+        toast.addSubview(imgView)
+        imgView.snp.makeConstraints { (make) in
+            make.top.equalTo(0)
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(label.snp.top)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+            toast.removeFromSuperview()
+        }
+    }
 }
 
 
