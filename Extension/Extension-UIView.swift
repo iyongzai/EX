@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
-import SnapKit
+//import SnapKit
 
 extension UIView {
+    //MARK: - 给view添加圆角
     @IBInspectable var ayCornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -21,7 +22,7 @@ extension UIView {
             layer.cornerRadius = newValue
         }
     }
-    
+    //MARK: - 给view指定边框宽度
     @IBInspectable var ayBorderWidth: CGFloat {
         get {
             return layer.borderWidth
@@ -30,7 +31,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-    
+    //MARK: - 给view指定边框颜色
     @IBInspectable var ayBorderColor: UIColor? {
         get {
             return UIColor.init(cgColor: layer.borderColor ?? UIColor.clear.cgColor)
@@ -44,48 +45,48 @@ extension UIView {
 
 // MARK: - 扩展toast功能：上面图片，下面文字
 extension UIView {
-    func makeToast(_ topImg: UIImage, bottomMSG: String) {
-        let toast = UIView()
-        toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        toast.ayCornerRadius = 10
-        self.addSubview(toast)
-        toast.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize.init(width: 125, height: 100))
-            make.centerX.equalTo(self)
-            make.centerY.equalTo(self).offset(-50)
-        }
-        let label = UILabel()
-        label.text = bottomMSG
-        //label.font = UIFont.init(name: "PingFangSC-Medium", size: 15)
-        label.font = UIFont.init(name: themeFontName, size: 15)
-        label.textColor = UIColor.white
-        label.textAlignment = .center
-        toast.addSubview(label)
-        label.snp.makeConstraints { (make) in
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(-15)
-            make.height.equalTo(20)
-        }
-        
-        let imgView = UIImageView()
-        imgView.image = topImg
-        imgView.contentMode = .center
-        toast.addSubview(imgView)
-        imgView.snp.makeConstraints { (make) in
-            make.top.equalTo(0)
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(label.snp.top)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
-            toast.removeFromSuperview()
-        }
-    }
+//    func makeToast(_ topImg: UIImage, bottomMSG: String) {
+//        let toast = UIView()
+//        toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+//        toast.ayCornerRadius = 10
+//        self.addSubview(toast)
+//        toast.snp.makeConstraints { (make) in
+//            make.size.equalTo(CGSize.init(width: 125, height: 100))
+//            make.centerX.equalTo(self)
+//            make.centerY.equalTo(self).offset(-50)
+//        }
+//        let label = UILabel()
+//        label.text = bottomMSG
+//        //label.font = UIFont.init(name: "PingFangSC-Medium", size: 15)
+//        label.font = UIFont.init(name: themeFontName, size: 15)
+//        label.textColor = UIColor.white
+//        label.textAlignment = .center
+//        toast.addSubview(label)
+//        label.snp.makeConstraints { (make) in
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(-15)
+//            make.height.equalTo(20)
+//        }
+//        
+//        let imgView = UIImageView()
+//        imgView.image = topImg
+//        imgView.contentMode = .center
+//        toast.addSubview(imgView)
+//        imgView.snp.makeConstraints { (make) in
+//            make.top.equalTo(0)
+//            make.left.right.equalTo(0)
+//            make.bottom.equalTo(label.snp.top)
+//        }
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+//            toast.removeFromSuperview()
+//        }
+//    }
 }
 
 
 
-/// 自定义View定义的协议方法
+//MARK: - 自定义View定义的协议方法
 protocol UI {
     
     /// 用于调整UI的接口
@@ -122,7 +123,7 @@ extension UI {
 }
 
 extension UIView {
-    
+    // MARK: - view截图
     func snapshot() -> UIImage? {
         let rect = self.frame
         UIGraphicsBeginImageContext(rect.size)
@@ -136,6 +137,7 @@ extension UIView {
     
 }
 extension UIView {
+    // MARK: - view截图
     /**
      Get the view's screen shot, this function may be called from any thread of your app.
      
@@ -145,7 +147,7 @@ extension UIView {
         
         return self.screenShot(scale: 0)
     }
-    
+    // MARK: - view截图
     func screenShot(scale: CGFloat) -> UIImage? {
         guard frame.size.height > 0 && frame.size.width > 0 else {
             
@@ -163,31 +165,31 @@ extension UIView {
 
 
 extension UIView {
-    static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: screenWidth-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
-        let caGradientLayer = CAGradientLayer()
-        caGradientLayer.frame = frame
-        caGradientLayer.startPoint = startPoint
-        caGradientLayer.endPoint = endPoint
-        caGradientLayer.colors = colors
-        
-        return caGradientLayer
-    }
-    
-    func addGradientBG() {
-        let _ = self.addGradientBGThenReturnIt()
-    }
-    func addGradientBGThenReturnIt() -> AYGradientView? {
-        guard self.superview != nil else {
-            return nil
-        }
-        self.backgroundColor = UIColor.clear
-        let gradientView = AYGradientView.init()
-        gradientView.ayCornerRadius = self.ayCornerRadius
-        self.superview?.insertSubview(gradientView, belowSubview: self)
-        gradientView.snp.makeConstraints { (make) in
-            make.center.equalTo(self)
-            make.size.equalTo(self.snp.size)
-        }
-        return gradientView
-    }
+//    static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: screenWidth-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
+//        let caGradientLayer = CAGradientLayer()
+//        caGradientLayer.frame = frame
+//        caGradientLayer.startPoint = startPoint
+//        caGradientLayer.endPoint = endPoint
+//        caGradientLayer.colors = colors
+//        
+//        return caGradientLayer
+//    }
+//    
+//    func addGradientBG() {
+//        let _ = self.addGradientBGThenReturnIt()
+//    }
+//    func addGradientBGThenReturnIt() -> AYGradientView? {
+//        guard self.superview != nil else {
+//            return nil
+//        }
+//        self.backgroundColor = UIColor.clear
+//        let gradientView = AYGradientView.init()
+//        gradientView.ayCornerRadius = self.ayCornerRadius
+//        self.superview?.insertSubview(gradientView, belowSubview: self)
+//        gradientView.snp.makeConstraints { (make) in
+//            make.center.equalTo(self)
+//            make.size.equalTo(self.snp.size)
+//        }
+//        return gradientView
+//    }
 }

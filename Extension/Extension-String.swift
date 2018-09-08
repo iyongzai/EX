@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 
-// MARK: 返回String的长度length
+// MARK: - 返回String的长度length
 extension String {
     var length: Int {return self.count}
 }
 
-// MARK: 计算rect
+// MARK: - 计算rect
 extension String {
     func boundingRect(with size: CGSize, options: NSStringDrawingOptions = [], attributes: [NSAttributedStringKey : Any]? = nil, context: NSStringDrawingContext?) -> CGRect {
         var rect = CGRect.zero
@@ -30,79 +30,58 @@ extension String {
 }
 
 
-// MARK: - 正则手机号码
+// MARK: - 正则
 extension String {
-//    func isTelNumber()->Bool
-//    {
-//        let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
-//        let  CM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
-//        let  CU = "^1(3[0-2]|5[256]|8[56])\\d{8}$"
-//        let  CT = "^1((33|53|8[09])[0-9]|349)\\d{7}$"
-//        let regextestmobile = NSPredicate(format: "SELF MATCHES %@",mobile)
-//        let regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
-//        let regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
-//        let regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
-//        if ((regextestmobile.evaluate(with: self) == true)
-//            || (regextestcm.evaluate(with: self)  == true)
-//            || (regextestct.evaluate(with: self) == true)
-//            || (regextestcu.evaluate(with: self) == true))
-//        {
-//            return true
-//        } else {
-//            return false
-//        }
-//    }
-    func isTelNumber()->Bool
-        
-    {
-        
+    // MARK: - 正则大陆手机号码
+    func isTelNumber() -> Bool {
         let mobile = "^1((3[0-9]|4[57]|5[0-35-9]|7[0678]|8[0-9])\\d{8}$)"
-        
         let  CM = "(^1(3[4-9]|4[7]|5[0-27-9]|7[8]|8[2-478])\\d{8}$)|(^1705\\d{7}$)";
-        
         let  CU = "(^1(3[0-2]|4[5]|5[56]|7[6]|8[56])\\d{8}$)|(^1709\\d{7}$)";
-        
         let  CT = "(^1(33|53|77|8[019])\\d{8}$)|(^1700\\d{7}$)";
-        
         let regextestmobile = NSPredicate(format: "SELF MATCHES %@",mobile)
-        
         let regextestcm = NSPredicate(format: "SELF MATCHES %@",CM )
-        
         let regextestcu = NSPredicate(format: "SELF MATCHES %@" ,CU)
-        
         let regextestct = NSPredicate(format: "SELF MATCHES %@" ,CT)
-        
         if ((regextestmobile.evaluate(with: self) == true)
-            
             || (regextestcm.evaluate(with: self)  == true)
-            
             || (regextestct.evaluate(with: self) == true)
-            
-            || (regextestcu.evaluate(with: self) == true))
-            
-        {
-            
+            || (regextestcu.evaluate(with: self) == true)) {
             return true
-            
-        }
-            
-        else
-            
-        {
-            
+        } else {
             return false
-            
         }
-        
+    }
+    
+    // MARK: - 正则验证通用方法,rule为正则
+    func validate(rule: String) -> Bool {
+        let regex = rule
+        let test:NSPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        return test.evaluate(with: self)
+    }
+    
+    // MARK: - 邮箱验证
+    func validateEmail() -> Bool {
+        let emailRegex = "^([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+(\\.[a-zA-Z]{2,3})+$"
+        let emailTest:NSPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailTest.evaluate(with: self)
+    }
+    
+    // MARK: - 密码验证（密码为8~20位，必须包括字母数字）
+    func validatePassword() -> Bool {
+        let regex = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$"
+        let test:NSPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        return test.evaluate(with: self)
     }
 }
 
 
 
 
+
+
 // MARK: - 汉字处理
 extension String {
-    // MARK: 汉字 -> 拼音
+    // MARK: - 汉字 -> 拼音
     func chineseToPinyin() -> String {
         
         let stringRef = NSMutableString(string: self) as CFMutableString
@@ -115,7 +94,7 @@ extension String {
         return pinyin
     }
     
-    // MARK: 判断是否含有中文
+    // MARK: - 判断是否含有中文
     func isIncludeChineseIn() -> Bool {
         
         for (_, value) in self.enumerated() {
@@ -128,7 +107,7 @@ extension String {
         return false
     }
     
-    // MARK: 获取第一个字符
+    // MARK: - 获取第一个字符
     func first() -> String {
         return String(self.prefix(1))
     }
@@ -137,7 +116,7 @@ extension String {
 
 
 extension String {
-    //根据开始位置和长度截取字符串
+    // MARK: - 根据开始位置和长度截取字符串
     func subString(start:Int, length:Int = -1) -> String {
         var len = length
         if len == -1 {
@@ -149,28 +128,30 @@ extension String {
     }
 }
 extension String {
-    func depth(_ numScale: Int) -> String {
-        guard numScale >= 0, numScale <= 20 else {
+    // MARK: - 强制指定需要多少位小数，不够小数位的补0（方法支持到20位小数，常用够用了，如需更多位小数请自行修改）
+    func forceDecimalDigits(_ digits: Int) -> String {
+        guard digits >= 0, digits <= 20 else {
             return self
         }
         let max = "00000000000000000000"
         if !self.contains(".") {
-            return self + "." + max.subString(start: 0, length: numScale)
+            return self + "." + max.subString(start: 0, length: digits)
         }
         let arr = self.components(separatedBy: ".")
         
-        return arr[0] + "." + (arr[1] + max).subString(start: 0, length: numScale)
+        return arr[0] + "." + (arr[1] + max).subString(start: 0, length: digits)
     }
 }
 
 extension String {
-    // MARK: - 隐藏部分内容，用*代替
+    // MARK: - 隐藏部分内容，用*代替(常用场景：银行卡，手机号，证件号码等)
     func secureText(location: Int, length: Int) -> String {
         guard location < self.count, length > 0, (location+length) < self.length else {
             return self
         }
         return self.replacingCharacters(in: Range.init(NSRange.init(location: location, length: length), in: self)!, with: String.init(repeating: "*", count: length))
     }
+    // MARK: - 指定多少位字符在一起，后面空格间隔开（常用场景：4位放一起的银行卡号）
     func togetherLength(_ length: Int) -> String {
         guard length < self.length else {
             return self
@@ -186,9 +167,9 @@ extension String {
         }
         return arr.componentsJoined(by: " ")
     }
-    // MARK: - 银行卡号隐藏部分
+    // MARK: - 银行卡号显示前后各3位，中间部分隐藏，然后从前到后4位放一起，空格间隔开
     func bankCardSecureText() -> String {
-        guard validate(rule: "^[0-9]*$", str: self) else {
+        guard self.validate(rule: "^[0-9]*$") else {
             return self
         }
         return self.replacingOccurrences(of: " ", with: "").secureText(location: 3, length: self.length-6).togetherLength(4)
@@ -197,7 +178,7 @@ extension String {
 
 
 extension String {
-    //Range转换为NSRange
+    //MARK: - Range转换为NSRange
     func nsRange(from range: Range<String.Index>) -> NSRange? {
         let utf16view = self.utf16
         if let from = range.lowerBound.samePosition(in: utf16view), let to = range.upperBound.samePosition(in: utf16view) {
@@ -206,7 +187,7 @@ extension String {
         return nil
     }
     
-    //Range转换为NSRange
+    //MARK: - Range转换为NSRange
     func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location,
@@ -223,11 +204,12 @@ extension String {
 
 
 extension String {
+    //MARK: - 判断时候是图片名称(暂时只加入了几个常用的格式，待扩展)
     func isPicName() -> Bool {
-        return validate(rule: "^(.+?)\\.(png|jpg|jpeg|gif)$", str: self)
+        return self.validate(rule: "^(.+?)\\.(png|jpg|jpeg|gif)$")
     }
     
-    /// htmlString修改img，video等标签的宽高
+    //MARK: - htmlString修改img，video等标签的宽高
     ///
     /// - Parameters:
     ///   - elem: img, video；注意：传参不需要带"<"字符，否则可能得不到预期结果
@@ -262,6 +244,7 @@ extension String {
         
         return result
     }
+    //上面方法的helper
     fileprivate func modifyProperty(_ elem: String, property: String, value: String?) -> String {
         if self.contains(property) {
             let range = self.nsRange(from: self.range(of: property)!)!
@@ -278,7 +261,7 @@ extension String {
                 arr.insert(value!, at: 1)
             }
             //重新组装拆分的数据(前半段拼接上去修改width信息的后半段)
-            return self.subString(start: 0, length: range.location) + arr.componentsJoined(by: "\"")
+            return self.subString(start: 0, length: range.location) + (arr as NSArray).componentsJoined(by: "\"")
         }else if value != nil {
             let range = self.nsRange(from: self.range(of: elem)!)!
             var result = self

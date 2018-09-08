@@ -83,8 +83,7 @@ extension UIColor {
 
 extension String {
     
-    /// String使用下标截取字符串
-    /// 例: "示例字符串"[0..<2] 结果是 "示例"
+    // MARK: - String使用下标截取字符串， 例: "示例字符串"[0..<2] 结果是 "示例"
     subscript (r: Range<Int>) -> String {
         get {
             let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
@@ -97,7 +96,7 @@ extension String {
 
 
 
-// MARK: 随机颜色
+// MARK: - 随机颜色
 extension UIColor {
     class func randColor() -> UIColor {
         return UIColor.init(red: CGFloat(arc4random()%(256-124)+124)/255.0, green: CGFloat(arc4random()%(256-124)+124)/255.0, blue: CGFloat(arc4random()%(256-124)+124)/255.0, alpha: 1)
@@ -105,7 +104,7 @@ extension UIColor {
 }
 
 
-// MARK: - iVCoin
+// MARK: - 定义一些常用的颜色到静态存储区（具体看项目UI配色）
 extension UIColor {
     
     static let bgTheme          = "#15181d".uiColor()//主题深蓝
@@ -151,6 +150,7 @@ extension UIColor {
 
 
 extension UIColor {
+    // MARK: - 由颜色填充生成一张图片
     func image() -> UIImage? {
         let rect = CGRect.init(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage {
     
-    /// 指定大小
+    //MARK: - 重新绘制一张指定大小的图片
     func scaleToSize(_ size:CGSize) -> UIImage {
         // 创建一个bitmap的context
         // 并把它设置成为当前正在使用的context
