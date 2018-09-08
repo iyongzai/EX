@@ -164,31 +164,58 @@ extension UIView {
 
 
 extension UIView {
-//    static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: screenWidth-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
-//        let caGradientLayer = CAGradientLayer()
-//        caGradientLayer.frame = frame
-//        caGradientLayer.startPoint = startPoint
-//        caGradientLayer.endPoint = endPoint
-//        caGradientLayer.colors = colors
-//        
-//        return caGradientLayer
-//    }
-//    
-//    func addGradientBG() {
-//        let _ = self.addGradientBGThenReturnIt()
-//    }
-//    func addGradientBGThenReturnIt() -> AYGradientView? {
-//        guard self.superview != nil else {
-//            return nil
-//        }
-//        self.backgroundColor = UIColor.clear
-//        let gradientView = AYGradientView.init()
-//        gradientView.ayCornerRadius = self.ayCornerRadius
-//        self.superview?.insertSubview(gradientView, belowSubview: self)
-//        gradientView.snp.makeConstraints { (make) in
-//            make.center.equalTo(self)
-//            make.size.equalTo(self.snp.size)
-//        }
-//        return gradientView
-//    }
+    static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
+        let caGradientLayer = CAGradientLayer()
+        caGradientLayer.frame = frame
+        caGradientLayer.startPoint = startPoint
+        caGradientLayer.endPoint = endPoint
+        caGradientLayer.colors = colors
+        
+        return caGradientLayer
+    }
+    
+    func addGradientBG() {
+        let _ = self.addGradientBGThenReturnIt()
+    }
+    func addGradientBGThenReturnIt() -> AYGradientView? {
+        guard self.superview != nil else {
+            return nil
+        }
+        self.backgroundColor = UIColor.clear
+        let gradientView = AYGradientView.init()
+        gradientView.ayCornerRadius = self.ayCornerRadius
+        self.superview?.insertSubview(gradientView, belowSubview: self)
+        gradientView.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+            make.size.equalTo(self.snp.size)
+        }
+        return gradientView
+    }
 }
+
+
+
+class AYGradientView: UIView {
+    
+    var caGradientLayer: CAGradientLayer!
+    
+    init(startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) {
+        super.init(frame: CGRect.zero)
+        caGradientLayer = UIView.newGradientLayer(startPoint: startPoint, endPoint: endPoint, colors: colors)
+        self.layer.insertSublayer(caGradientLayer, at: 0)
+        self.isUserInteractionEnabled = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.layer.insertSublayer(caGradientLayer, at: 0)
+        self.isUserInteractionEnabled = false
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        caGradientLayer.frame = self.bounds
+    }
+}
+
