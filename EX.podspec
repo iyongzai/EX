@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EX"
-  s.version      = "0.0.1"
-  s.summary      = "Some extension of system class."
+  s.version      = "0.0.2"
+  s.summary      = "EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                            EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法
+                            EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法，使用方便
                    DESC
 
   s.homepage     = "https://github.com/iyongzai/EX"
