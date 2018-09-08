@@ -12,6 +12,14 @@
 		2FB26FAE21436C2F0096E546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FAC21436C2F0096E546 /* Main.storyboard */; };
 		2FB26FB021436C320096E546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FAF21436C320096E546 /* Assets.xcassets */; };
 		2FB26FB321436C320096E546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FB121436C320096E546 /* LaunchScreen.storyboard */; };
+		2FB26FC6214376680096E546 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBB214376680096E546 /* Extension-String.swift */; };
+		2FB26FC7214376680096E546 /* Extension-UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBC214376680096E546 /* Extension-UIImage.swift */; };
+		2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */; };
+		2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBF214376680096E546 /* Extension-Double.swift */; };
+		2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC0214376680096E546 /* Extension-Color.swift */; };
+		2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC2214376680096E546 /* Extension-UIView.swift */; };
+		2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC5214376680096E546 /* Extension-UITextField.swift */; };
+		2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FD12143789F0096E546 /* Extension-Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		2FB26FAF21436C320096E546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB26FB221436C320096E546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FB26FB421436C320096E546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB26FBB214376680096E546 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
+		2FB26FBC214376680096E546 /* Extension-UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIImage.swift"; sourceTree = "<group>"; };
+		2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UINavigationBar.swift"; sourceTree = "<group>"; };
+		2FB26FBF214376680096E546 /* Extension-Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
+		2FB26FC0214376680096E546 /* Extension-Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Color.swift"; sourceTree = "<group>"; };
+		2FB26FC2214376680096E546 /* Extension-UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIView.swift"; sourceTree = "<group>"; };
+		2FB26FC5214376680096E546 /* Extension-UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UITextField.swift"; sourceTree = "<group>"; };
+		2FB26FD12143789F0096E546 /* Extension-Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Array.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB26FA721436C2F0096E546 /* EXDemo */,
+				2FB26FBA214376680096E546 /* Extension */,
 				2FB26FA621436C2F0096E546 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +79,22 @@
 				2FB26FB421436C320096E546 /* Info.plist */,
 			);
 			path = EXDemo;
+			sourceTree = "<group>";
+		};
+		2FB26FBA214376680096E546 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2FB26FBB214376680096E546 /* Extension-String.swift */,
+				2FB26FBC214376680096E546 /* Extension-UIImage.swift */,
+				2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */,
+				2FB26FBF214376680096E546 /* Extension-Double.swift */,
+				2FB26FC0214376680096E546 /* Extension-Color.swift */,
+				2FB26FC2214376680096E546 /* Extension-UIView.swift */,
+				2FB26FC5214376680096E546 /* Extension-UITextField.swift */,
+				2FB26FD12143789F0096E546 /* Extension-Array.swift */,
+			);
+			name = Extension;
+			path = ../Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +169,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB26FAB21436C2F0096E546 /* ViewController.swift in Sources */,
+				2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */,
+				2FB26FC7214376680096E546 /* Extension-UIImage.swift in Sources */,
+				2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */,
+				2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */,
 				2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */,
+				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
+				2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */,
+				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
+				2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EXDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,6 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EXDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

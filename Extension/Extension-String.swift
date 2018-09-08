@@ -15,20 +15,6 @@ extension String {
     var length: Int {return self.count}
 }
 
-// MARK: - 计算rect
-extension String {
-    func boundingRect(with size: CGSize, options: NSStringDrawingOptions = [], attributes: [NSAttributedStringKey : Any]? = nil, context: NSStringDrawingContext?) -> CGRect {
-        var rect = CGRect.zero
-        if self.length == 0 {
-            return rect
-        }
-        let newString = self as NSString
-        rect = newString.boundingRect(with: size, options: options, attributes: attributes, context: context)
-        
-        return rect
-    }
-}
-
 
 // MARK: - 正则
 extension String {
