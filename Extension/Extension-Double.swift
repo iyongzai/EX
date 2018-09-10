@@ -46,3 +46,18 @@ extension Double {
         return (self/1000).toString(maxLength:kLength) + "k"
     }
 }
+
+
+extension String {
+    // MARK: - String类型转Double，1、避免Double(str)失败，2、NumberFormatter处理
+    public func toDouble() -> Double {
+        guard self.length > 0 else {
+            return 0
+        }
+        let formater = NumberFormatter.init()
+        formater.numberStyle = .decimal
+        
+        return formater.number(from: self)?.doubleValue ?? 0
+    }
+}
+
