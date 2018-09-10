@@ -10,7 +10,7 @@ import UIKit
 
 extension UITextField {
     //MARK: - 设置UITextField的leftView
-    func aySetLeftImageView(_ imageName: String, width: CGFloat = 30, height: CGFloat = 44) {
+    public func aySetLeftImageView(_ imageName: String, width: CGFloat = 30, height: CGFloat = 44) {
         let uLeftView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: width, height: height))
         uLeftView.image = UIImage.init(named: imageName)
         uLeftView.contentMode = .center
@@ -18,7 +18,7 @@ extension UITextField {
         self.leftViewMode = .always
     }
     //MARK: - 设置UITextField的rightView
-    func aySetRightImageView(_ imageName: String, width: CGFloat = 30, height: CGFloat = 44) {
+    public func aySetRightImageView(_ imageName: String, width: CGFloat = 30, height: CGFloat = 44) {
         let uRightView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: width, height: height))
         uRightView.image = UIImage.init(named: imageName)
         uRightView.contentMode = .center
@@ -26,7 +26,7 @@ extension UITextField {
         self.rightViewMode = .always
     }
     //MARK: - 设置UITextField的rightView
-    func aySetRightButton(_ normalImageName: String, width: CGFloat = 30, height: CGFloat = 44) -> UIButton {
+    public func aySetRightButton(_ normalImageName: String, width: CGFloat = 30, height: CGFloat = 44) -> UIButton {
         let uRightView = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: width, height: height))
         uRightView.setImage(UIImage.init(named: normalImageName), for: .normal)
         uRightView.contentMode = .center

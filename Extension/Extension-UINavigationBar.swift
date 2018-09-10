@@ -10,11 +10,11 @@ import UIKit
 
 extension UINavigationBar {
     // MARK: - 修改navbar背景颜色
-    func setBackground(_ color: UIColor) {
+    public func setBackground(_ color: UIColor) {
         self.setBackgroundImage(color.image(), for: .any, barMetrics: .default)
     }
     // MARK: - 是否显示navbar的底部阴影效果
-    func setShadowVisible(_ visible: Bool) {
+    public func setShadowVisible(_ visible: Bool) {
         self.shadowImage = visible ? nil : UIImage()
     }
 }

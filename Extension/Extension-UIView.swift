@@ -12,7 +12,7 @@ import SnapKit
 
 extension UIView {
     //MARK: - 给view添加圆角
-    @IBInspectable var ayCornerRadius: CGFloat {
+    @IBInspectable public var ayCornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -23,7 +23,7 @@ extension UIView {
         }
     }
     //MARK: - 给view指定边框宽度
-    @IBInspectable var ayBorderWidth: CGFloat {
+    @IBInspectable public var ayBorderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -32,7 +32,7 @@ extension UIView {
         }
     }
     //MARK: - 给view指定边框颜色
-    @IBInspectable var ayBorderColor: UIColor? {
+    @IBInspectable public var ayBorderColor: UIColor? {
         get {
             return UIColor.init(cgColor: layer.borderColor ?? UIColor.clear.cgColor)
         }
@@ -46,7 +46,7 @@ extension UIView {
 // MARK: - 扩展toast功能：上面图片，下面文字
 extension UIView {
     // MARK: - 扩展toast功能：上面图片，下面文字
-    func makeToast(_ topImg: UIImage, bottomMSG: String) {
+    public func makeToast(_ topImg: UIImage, bottomMSG: String) {
         let toast = UIView()
         toast.backgroundColor = UIColor.black.withAlphaComponent(0.9)
         toast.ayCornerRadius = 10
@@ -87,7 +87,7 @@ extension UIView {
 
 
 //MARK: - 自定义View定义的协议方法
-protocol UI {
+public protocol UI {
     
     /// 用于调整UI的接口
     func adjustUI()
@@ -124,7 +124,7 @@ extension UI {
 
 extension UIView {
     // MARK: - view截图
-    func snapshot() -> UIImage? {
+    public func snapshot() -> UIImage? {
         let rect = self.frame
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -143,12 +143,12 @@ extension UIView {
      
      - returns: The screen shot's image.
      */
-    func screenShot() -> UIImage? {
+    public func screenShot() -> UIImage? {
         
         return self.screenShot(scale: 0)
     }
     // MARK: - view截图
-    func screenShot(scale: CGFloat) -> UIImage? {
+    public func screenShot(scale: CGFloat) -> UIImage? {
         guard frame.size.height > 0 && frame.size.width > 0 else {
             
             return nil
@@ -166,7 +166,7 @@ extension UIView {
 
 extension UIView {
     // MARK: - 快捷生成一个渐变layer
-    static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
+    public static func newGradientLayer(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width-32, height: 44), startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) -> CAGradientLayer {
         let caGradientLayer = CAGradientLayer()
         caGradientLayer.frame = frame
         caGradientLayer.startPoint = startPoint
@@ -177,10 +177,10 @@ extension UIView {
     }
     
     // MARK: - 底层添加一个同样大小，位置一样的渐变背景
-    func addGradientBG() {
+    public func addGradientBG() {
         let _ = self.addGradientBGThenReturnIt()
     }
-    func addGradientBGThenReturnIt() -> AYGradientView? {
+    public func addGradientBGThenReturnIt() -> AYGradientView? {
         guard self.superview != nil else {
             return nil
         }
@@ -198,24 +198,24 @@ extension UIView {
 
 
 
-class AYGradientView: UIView {
+public class AYGradientView: UIView {
     
-    var caGradientLayer: CAGradientLayer!
+    public var caGradientLayer: CAGradientLayer!
     
-    init(startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) {
+    public init(startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 0), colors: [Any]? = ["#FC5D9F".uiColor().cgColor, "#5863FC".uiColor().cgColor]) {
         super.init(frame: CGRect.zero)
         caGradientLayer = UIView.newGradientLayer(startPoint: startPoint, endPoint: endPoint, colors: colors)
         self.layer.insertSublayer(caGradientLayer, at: 0)
         self.isUserInteractionEnabled = false
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.layer.insertSublayer(caGradientLayer, at: 0)
         self.isUserInteractionEnabled = false
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         caGradientLayer.frame = self.bounds

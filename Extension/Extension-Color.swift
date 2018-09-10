@@ -13,7 +13,7 @@ import UIKit
 //MARK: 第一种方式是给String添加扩展
 extension String {
     // MARK: - 将十六进制颜色转换为UIColor
-    func uiColor() -> UIColor {
+    public func uiColor() -> UIColor {
         
         var hexColorString = self
         
@@ -47,7 +47,7 @@ extension UIColor {
      
      - returns:
      */
-    convenience init(hex: UInt, alpha: CGFloat = 1.0) {
+    public convenience init(hex: UInt, alpha: CGFloat = 1.0) {
         self.init(red: CGFloat((hex & 0xFF0000) >> 16) / 255.0,
                   green: CGFloat((hex & 0x00FF00) >> 8) / 255.0,
                   blue: CGFloat(hex & 0x0000FF) / 255.0,
@@ -57,7 +57,7 @@ extension UIColor {
     /// 用十六进制颜色创建UIColor
     ///
     /// - Parameter hexColor: 十六进制颜色 (0F0F0F)
-    convenience init(hexColor: String) {
+    public convenience init(hexColor: String) {
         
         var hexColorString = hexColor
         
@@ -84,7 +84,7 @@ extension UIColor {
 extension String {
     
     // MARK: - String使用下标截取字符串， 例: "示例字符串"[0..<2] 结果是 "示例"
-    subscript (r: Range<Int>) -> String {
+    public subscript (r: Range<Int>) -> String {
         get {
             let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
             let endIndex = self.index(self.startIndex, offsetBy: r.upperBound)
@@ -99,7 +99,7 @@ extension String {
 // MARK: - 随机颜色
 extension UIColor {
     // MARK: - 随机颜色
-    class func randColor() -> UIColor {
+    public static func randColor() -> UIColor {
         return UIColor.init(red: CGFloat(arc4random()%(256-124)+124)/255.0, green: CGFloat(arc4random()%(256-124)+124)/255.0, blue: CGFloat(arc4random()%(256-124)+124)/255.0, alpha: 1)
     }
 }
@@ -107,12 +107,6 @@ extension UIColor {
 
 // MARK: - 定义一些常用的颜色到静态存储区（具体看项目UI配色）
 extension UIColor {
-    
-    static let bgTheme          = "#15181d".uiColor()//主题深蓝
-    static let bgText           = "#676f89".uiColor()//深蓝色--文字颜色
-    static let bgRed            = "#FF5240".uiColor()//涨跌红
-    static let bgGreen          = "#4BC97D".uiColor()//涨跌绿
-    static let bgSelectedBG     = "#202533".uiColor()//分类选择效果背景颜色--也是深蓝色
     
     static let ivTheme          = UIColor.init(red: 36.0/255.0, green: 39.0/255.0, blue: 54.0/255.0, alpha: 1)//主题深蓝
     static let ivText           = "#8A98BD".uiColor()
@@ -152,7 +146,7 @@ extension UIColor {
 
 extension UIColor {
     // MARK: - 由颜色填充生成一张图片
-    func image() -> UIImage? {
+    public func image() -> UIImage? {
         let rect = CGRect.init(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
