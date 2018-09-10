@@ -105,7 +105,7 @@ public protocol UI {
     func configure<T>(model: T)
 }
 
-extension UI {
+public extension UI {
     /// 用于调整UI的接口
     func adjustUI(){}
     
