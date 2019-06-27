@@ -245,7 +245,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EXDemo/Pods-EXDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -254,7 +254,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EXDemo/Pods-EXDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		388F3B8E0DF0F37DBDADE4C5 /* [CP] Check Pods Manifest.lock */ = {
