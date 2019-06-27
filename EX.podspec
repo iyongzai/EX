@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EX"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法"
 
   # This description is used to generate tags and improve search results.
@@ -135,6 +135,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "SnapKit"
+  #s.dependency "SnapKit"
 
 end

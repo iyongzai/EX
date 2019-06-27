@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import sna
+import SnapKit
 
 class DescViewController: UIViewController {
     
