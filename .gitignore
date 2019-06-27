@@ -1,5 +1,18 @@
+# Mac OS X
+*.DS_Store
+
 # Xcode
 #
+*.xcworkspacedata
+*.xcsettings
+*.xcscheme
+
+project.xcworkspace
+project.xcworkspace/
+UserInterfaceState.xcuserstate
+UserInterface.xcuserstate
+
+
 build/
 *.pbxuser
 !default.pbxuser
@@ -10,13 +23,13 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+xcuserdata/
 *.xccheckout
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-.DS_Store
 
 # CocoaPods
 #
