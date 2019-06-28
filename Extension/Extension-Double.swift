@@ -48,10 +48,15 @@ extension Double {
     // MARK: - Double类型转String，满1000折合k显示，这算后可指定小数位，默认保留2位小数
     /// Double类型转String，满1000折合k显示，这算后可指定小数位，默认保留2位小数
     ///
-    /// - Parameter kLength: 小数位
+    /// - Parameters:
+    ///   - kLength: 小数位
+    ///   - forceDecimalDigits: 非k显示情况下强制性保留小数位
     /// - Returns: String
-    public func toKString(kLength: Int = 2) -> String {
+    public func toKString(kLength: Int = 2, forceDecimalDigits: Int? = nil) -> String {
         guard self > 1000 else {
+            if forceDecimalDigits != nil {
+                return self.toString().decimal(forceDigits: UInt(forceDecimalDigits!))
+            }
             return self.toString()
         }
         return (self/1000).toString(maxLength:kLength) + "k"

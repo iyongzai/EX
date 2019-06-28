@@ -14,7 +14,7 @@ extension String {
     /// 将十六进制颜色转换为UIColor
     ///
     /// - Returns: UIColor
-    public func uiColor() -> UIColor {
+    public func uiColor(alpha: CGFloat = 1.0) -> UIColor {
         
         var hexColorString = self
         
@@ -32,7 +32,7 @@ extension String {
         
         Scanner(string: hexColorString[4..<6]).scanHexInt32(&blue)
         
-        return UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
+        return UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
     
 }
@@ -57,7 +57,7 @@ extension UIColor {
     /// 用十六进制颜色创建UIColor
     ///
     /// - Parameter hexColor: 十六进制颜色 (0F0F0F)
-    public convenience init(hexColor: String) {
+    public convenience init(hexColor: String, alpha: CGFloat = 1.0) {
         
         var hexColorString = hexColor
         
@@ -75,7 +75,7 @@ extension UIColor {
         
         Scanner(string: hexColorString[4..<6]).scanHexInt32(&blue)
         
-        self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
+        self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
 }
 extension String {
@@ -112,10 +112,11 @@ extension UIColor {
     // MARK: - 由颜色填充生成一张图片
     /// 由颜色填充生成一张图片
     ///
+    /// - Parameter scale: 缩放因子
     /// - Returns: UIImage
-    public func image() -> UIImage? {
+    public func image(scale: CGFloat = UIScreen.main.scale) -> UIImage? {
         let rect = CGRect.init(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, scale)
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(self.cgColor)
         context?.fill(rect)
