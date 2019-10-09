@@ -41,7 +41,7 @@ class DescViewController: UIViewController {
         if let filePath = Bundle.main.path(forResource: fileName, ofType: nil), let content = try? String.init(contentsOfFile: filePath) {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.minimumLineHeight = 20
-            let attr = NSAttributedString.init(string: content, attributes: [NSAttributedStringKey.font : UIFont.init(name: "PingFangSC-Medium", size: 14)!, NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.paragraphStyle : paragraphStyle])
+            let attr = NSAttributedString.init(string: content, attributes: [NSAttributedString.Key.font : UIFont.init(name: "PingFangSC-Medium", size: 14)!, NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.paragraphStyle : paragraphStyle])
             textView.attributedText = attr
         }
         

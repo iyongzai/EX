@@ -89,7 +89,7 @@ extension ViewController: UI {
         self.view.backgroundColor = UIColor.viewBG
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.setBackground(UIColor.navBGColor)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 24), NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24), NSAttributedString.Key.foregroundColor : UIColor.white]
         tableView.backgroundColor = UIColor.tableViewBG
         
     }
