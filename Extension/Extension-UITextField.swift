@@ -98,3 +98,18 @@ extension UITextField {
         return uRightView
     }
 }
+
+
+extension UITextField {
+    var placeholderLabel: UILabel? {
+        get {
+            guard let ivar = class_getInstanceVariable(self.classForCoder, "_placeholderLabel") else {
+                return nil
+            }
+            return object_getIvar(self, ivar) as? UILabel
+        }
+    }
+    func setPlaceholderColor(_ color: UIColor?) {
+        
+    }
+}

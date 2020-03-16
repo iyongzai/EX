@@ -11,20 +11,20 @@ import UIKit
 
 
 // MARK: - 返回String的长度length
-extension String {
+public extension String {
     // MARK: - string的长度
     /// string的长度
-    public var length: Int {return self.count}
+    var length: Int {return self.count}
 }
 
 
 // MARK: - 正则
-extension String {
+public extension String {
     // MARK: - 正则大陆手机号码
     /// 正则大陆手机号码
     ///
     /// - Returns: 返回匹配结果
-    public func isTelNumber() -> Bool {
+    func isTelNumber() -> Bool {
         let mobile = "^1((3[0-9]|4[57]|5[0-35-9]|7[0678]|8[0-9])\\d{8}$)"
         let  CM = "(^1(3[4-9]|4[7]|5[0-27-9]|7[8]|8[2-478])\\d{8}$)|(^1705\\d{7}$)";
         let  CU = "(^1(3[0-2]|4[5]|5[56]|7[6]|8[56])\\d{8}$)|(^1709\\d{7}$)";
@@ -48,7 +48,7 @@ extension String {
     ///
     /// - Parameter rule: 正则表达式
     /// - Returns: 返回匹配结果
-    public func validate(rule: String) -> Bool {
+    func validate(rule: String) -> Bool {
         let regex = rule
         let test:NSPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return test.evaluate(with: self)
@@ -58,7 +58,7 @@ extension String {
     /// 邮箱验证
     ///
     /// - Returns: 返回验证结果
-    public func validateEmail(rule: String = "^([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+(\\.[a-zA-Z]{2,3})+$") -> Bool {
+    func validateEmail(rule: String = "^([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\-|\\.]?)*[a-zA-Z0-9]+(\\.[a-zA-Z]{2,3})+$") -> Bool {
         let emailRegex = rule
         let emailTest:NSPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: self)
@@ -67,8 +67,8 @@ extension String {
     // MARK: - 密码验证（默认值为：密码为8~20位，必须包括字母数字）
     /// 密码验证（密码为8~20位，必须包括字母数字）
     ///
-    /// - Returns: <#return value description#>
-    public func validatePassword(rule: String = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$") -> Bool {
+    /// - Returns: 返回验证结果
+    func validatePassword(rule: String = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$") -> Bool {
         let regex = rule
         let test:NSPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return test.evaluate(with: self)
@@ -81,12 +81,12 @@ extension String {
 
 
 // MARK: - 汉字处理
-extension String {
+public extension String {
     // MARK: - 汉字 -> 拼音
     /// 汉字 -> 拼音
     ///
     /// - Returns: 返回拼音
-    public func chineseToPinyin() -> String {
+    func chineseToPinyin() -> String {
         
         let stringRef = NSMutableString(string: self) as CFMutableString
         // 转换为带音标的拼音
@@ -102,7 +102,7 @@ extension String {
     /// 判断是否含有中文
     ///
     /// - Returns: 返回判断结果
-    public func isIncludeChineseIn() -> Bool {
+    func isIncludeChineseIn() -> Bool {
         
         for (_, value) in self.enumerated() {
             
@@ -118,14 +118,14 @@ extension String {
     /// 获取第一个字符
     ///
     /// - Returns: 返回第一个字符
-    public func first() -> String {
+    func first() -> String {
         return String(self.prefix(1))
     }
     
 }
 
 
-extension String {
+public extension String {
     // MARK: - 根据开始位置和长度截取字符串
     /// 获取子串
     ///
@@ -133,7 +133,7 @@ extension String {
     ///   - start: 开始位置（location）
     ///   - length: 需要截取的长度
     /// - Returns: 返回截取后的子串
-    public func subString(start:Int, length:Int = -1) -> String {
+    func subString(start:Int, length:Int = -1) -> String {
         var len = length
         if len == -1 {
             len = self.count - start
@@ -143,14 +143,14 @@ extension String {
         return String(self[st ..< en])
     }
 }
-extension String {
+public extension String {
     // MARK: - 强制指定需要多少位小数，不够小数位的补0（方法支持到20位小数，常用够用了，如需更多位小数请自行修改）
     /// 强制指定需要多少位小数，不够小数位的补0（方法支持到20位小数，常用够用了，如需更多位小数请自行修改）
     ///
     /// - Parameter digits: 小数位数
     /// - Returns: 返回转换化后的结果
     @available(*, deprecated, renamed: "decimal(forceDigits:)")
-    public func forceDecimalDigits(_ digits: Int) -> String {
+    func forceDecimalDigits(_ digits: Int) -> String {
         guard digits >= 0, digits <= 20 else {
             return self
         }
@@ -162,7 +162,7 @@ extension String {
     ///
     /// - Parameter digits: 小数位数
     /// - Returns: 返回转换化后的结果
-    public func decimal(forceDigits: UInt) -> String {
+    func decimal(forceDigits: UInt) -> String {
         guard Double(self) != nil else {
             return self
         }
@@ -178,9 +178,35 @@ extension String {
         
         return arr[0] + "." + (arr[1] + str).subString(start: 0, length: Int(forceDigits))
     }
+    
+    
+    /// 删除小数点后面的多余0
+    /// - Parameter maxDigits: 最大小数位
+    func deleteTail0() -> String {
+        
+        guard self.contains(".") else {
+            return self
+        }
+        
+        var result = self
+        var i = 1
+        while i < self.count {
+            if result.hasSuffix("0") {
+                result.removeLast()
+                i += 1
+            }else{
+                break
+            }
+        }
+        if result.hasSuffix(".") {
+            result.removeLast()
+        }
+        
+        return result
+    }
 }
 
-extension String {
+public extension String {
     // MARK: - 隐藏部分内容，用*代替(常用场景：银行卡，手机号，证件号码等)
     /// 隐藏部分内容，用*代替(常用场景：银行卡，手机号，证件号码等)
     ///
@@ -188,7 +214,7 @@ extension String {
     ///   - location: 开始位置
     ///   - length: 需要替换的长度
     /// - Returns: 返回替换后的字串
-    public func secureText(location: Int, length: Int) -> String {
+    func secureText(location: Int, length: Int) -> String {
         guard location < self.count, length > 0, (location+length) < self.length else {
             return self
         }
@@ -199,7 +225,7 @@ extension String {
     ///
     /// - Parameter length:位数
     /// - Returns: Result
-    public func togetherLength(_ length: Int) -> String {
+    func togetherLength(_ length: Int) -> String {
         guard length < self.length else {
             return self
         }
@@ -218,7 +244,7 @@ extension String {
     /// 银行卡号显示前后各3位，中间部分隐藏，然后从前到后4位放一起，空格间隔开
     ///
     /// - Returns: eg: 612***********888
-    public func bankCardSecureText() -> String {
+    func bankCardSecureText() -> String {
         guard self.validate(rule: "^[0-9]*$") else {
             return self
         }
@@ -227,13 +253,13 @@ extension String {
 }
 
 
-extension String {
+public extension String {
     //MARK: - Range转换为NSRange
     /// Range转换为NSRange
     ///
     /// - Parameter range: range
     /// - Returns: NSRange
-    public func nsRange(from range: Range<String.Index>) -> NSRange? {
+    func nsRange(from range: Range<String.Index>) -> NSRange? {
         let utf16view = self.utf16
         if let from = range.lowerBound.samePosition(in: utf16view), let to = range.upperBound.samePosition(in: utf16view) {
             return NSMakeRange(utf16view.distance(from: utf16view.startIndex, to: from), utf16view.distance(from: from, to: to))
@@ -246,7 +272,7 @@ extension String {
     ///
     /// - Parameter nsRange: nsRange
     /// - Returns: Range
-    public func range(from nsRange: NSRange) -> Range<String.Index>? {
+    func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location,
                                      limitedBy: utf16.endIndex),
@@ -261,12 +287,12 @@ extension String {
 
 
 
-extension String {
+public extension String {
     //MARK: - 判断是否是图片名称(暂时只加入了几个常用的格式，待扩展)
     /// 判断是否是图片名称(暂时只加入了几个常用的格式，待扩展)
     ///
     /// - Returns: Result
-    public func isPicName() -> Bool {
+    func isPicName() -> Bool {
         return self.validate(rule: "^(.+?)\\.(png|jpg|jpeg|gif)$")
     }
     
@@ -277,7 +303,7 @@ extension String {
     ///   - width: 绝对值如375,或者图片百分比如100%
     ///   - height: 跟width类似
     /// - Returns: 修改后的结果
-    public func htmlStringElements(_ elem: String, width: String? = nil, height: String? = nil) -> String {
+    func htmlStringElements(_ elem: String, width: String? = nil, height: String? = nil) -> String {
         guard self.contains(elem) else {
             return self
         }
@@ -333,12 +359,12 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     //MARK: - 是否成年
     /// - 是否成年（18）
     ///
     /// - Returns: 是否成年
-    public func isAdult() -> Bool {
+    func isAdult() -> Bool {
         guard self.length == 10 else {
             return false
         }
@@ -382,13 +408,13 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     // MARK: - 去掉首尾空格和换行符
     /// 去掉首尾空格和换行符
     ///
     /// - Returns: Result
     @available(*, deprecated, renamed: "trim(in:)")
-    public func trimmingWhitespacesAndNewlines() -> String {
+    func trimmingWhitespacesAndNewlines() -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
@@ -397,19 +423,19 @@ extension String {
     ///
     /// - Parameter set: CharacterSet, set默认值为whitespacesAndNewlines(去掉首尾的空格和换行符)
     /// - Returns: trim后的结果
-    public func trim(in set: CharacterSet = CharacterSet.whitespacesAndNewlines) -> String {
+    func trim(in set: CharacterSet = CharacterSet.whitespacesAndNewlines) -> String {
         return self.trimmingCharacters(in: set)
     }
 }
 
 
-extension String {
+public extension String {
     
     // MARK: - 直接由string名称转换成UIKeyboardType类型
     /// 直接由string名称转换成UIKeyboardType类型
     ///
     /// - Returns: 返回UIKeyboardType
-    public func keyboarType() -> UIKeyboardType {
+    func keyboarType() -> UIKeyboardType {
         /*
          case `default` // Default type for the current input method.
          

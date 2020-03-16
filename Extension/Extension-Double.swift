@@ -9,24 +9,6 @@
 import Foundation
 
 extension Double {
-    // MARK: - Double类型转String（可修正精度问题）
-    /// Double类型转String（可修正精度问题）
-    ///
-    /// - Returns: String
-    public func toString() -> String
-    {
-        var stringValue : String = "0.00"
-        
-        let formatter = NumberFormatter()
-        formatter.usesSignificantDigits = true
-        formatter.maximumSignificantDigits = 100
-        formatter.groupingSeparator = ""
-        formatter.numberStyle = .decimal
-        stringValue = formatter.string(from: NSNumber(value: self))!
-        
-        return stringValue
-    }
-    // MARK: - Double类型转String，保留指定小数位，多余的小数位会被舍弃（直接舍弃，非四舍五入）
     /// Double类型转String，保留指定小数位，多余的小数位会被舍弃（直接舍弃，非四舍五入）
     ///
     /// - Parameter maxLength: 最大小数位
@@ -45,8 +27,7 @@ extension Double {
         }
         return result
     }
-    // MARK: - Double类型转String，满1000折合k显示，这算后可指定小数位，默认保留2位小数
-    /// Double类型转String，满1000折合k显示，这算后可指定小数位，默认保留2位小数
+    /// Double类型转String，满1000折合k显示，折算后可指定小数位，默认保留2位小数
     ///
     /// - Parameters:
     ///   - kLength: 小数位
@@ -64,23 +45,5 @@ extension Double {
 }
 
 
-extension String {
-    // MARK: - String类型转Double
-    ///
-    ///
-    /// - Returns: Double
-    public func toDouble() -> Double {
-        guard self.length > 0 else {
-            return 0
-        }
-        /*
-        let formater = NumberFormatter.init()
-        formater.numberStyle = .decimal
-        
-        return formater.number(from: self)?.doubleValue ?? 0
-        */
-        let num = NSDecimalNumber.init(string: self)
-        return num.doubleValue
-    }
-}
+
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,9 @@
 		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
 		C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96322C4EF1A00BB365A /* Protocol.swift */; };
 		C78A338622C50B690048EB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A338522C50B690048EB09 /* Color.swift */; };
+		C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */; };
+		C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */; };
+		C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
 		C729C96322C4EF1A00BB365A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		C78A338522C50B690048EB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-2-Number.swift"; sourceTree = "<group>"; };
+		C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonlyNumber.swift; sourceTree = "<group>"; };
+		C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Number-2-String.swift"; sourceTree = "<group>"; };
 		EDEF919788C8D45ECEF374D1 /* Pods-EXDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,9 @@
 				2FB26FBC214376680096E546 /* Extension-UIImage.swift */,
 				2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */,
 				2FB26FBF214376680096E546 /* Extension-Double.swift */,
+				C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */,
+				C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */,
+				C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */,
 				2FB26FC0214376680096E546 /* Extension-Color.swift */,
 				2FB26FC2214376680096E546 /* Extension-UIView.swift */,
 				2FB26FC5214376680096E546 /* Extension-UITextField.swift */,
@@ -282,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */,
 				2FB26FAB21436C2F0096E546 /* ViewController.swift in Sources */,
 				C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */,
 				2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */,
@@ -293,8 +303,10 @@
 				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
 				C78A338622C50B690048EB09 /* Color.swift in Sources */,
 				2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */,
+				C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */,
 				C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */,
 				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
+				C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */,
 				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
 				2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */,
 				C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */,
