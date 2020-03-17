@@ -182,7 +182,7 @@ public extension String {
     
     /// 删除小数点后面的多余0
     /// - Parameter maxDigits: 最大小数位
-    func deleteTail0() -> String {
+    func trimDecimalTail0() -> String {
         
         guard self.contains(".") else {
             return self

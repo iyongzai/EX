@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EX"
-  s.version      = "0.5.0"
+  s.version      = "0.5.1"
   s.summary      = "EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法"
 
   # This description is used to generate tags and improve search results.
@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/iyongzai/EX.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/iyongzai/EX.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
