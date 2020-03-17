@@ -100,7 +100,7 @@ extension UITextField {
 }
 
 
-extension UITextField {
+public extension UITextField {
     var placeholderLabel: UILabel? {
         get {
             guard let ivar = class_getInstanceVariable(self.classForCoder, "_placeholderLabel") else {
@@ -109,7 +109,7 @@ extension UITextField {
             return object_getIvar(self, ivar) as? UILabel
         }
     }
-    func setPlaceholderColor(_ color: UIColor?) {
-        
+     func setPlaceholderColor(_ color: UIColor?) {
+        self.placeholderLabel?.textColor = color
     }
 }
