@@ -24,7 +24,7 @@
 		2FB26FC6214376680096E546 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBB214376680096E546 /* Extension-String.swift */; };
 		2FB26FC7214376680096E546 /* Extension-UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBC214376680096E546 /* Extension-UIImage.swift */; };
 		2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */; };
-		2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBF214376680096E546 /* Extension-Double.swift */; };
+		2FB26FCA214376680096E546 /* Extension-Double-Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */; };
 		2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC0214376680096E546 /* Extension-Color.swift */; };
 		2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC2214376680096E546 /* Extension-UIView.swift */; };
 		2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC5214376680096E546 /* Extension-UITextField.swift */; };
@@ -34,6 +34,7 @@
 		C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */; };
 		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
 		C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96322C4EF1A00BB365A /* Protocol.swift */; };
+		C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2D24221110001A5900 /* Extension-Double.swift */; };
 		C78A338622C50B690048EB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A338522C50B690048EB09 /* Color.swift */; };
 		C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */; };
 		C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */; };
@@ -61,7 +62,7 @@
 		2FB26FBB214376680096E546 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
 		2FB26FBC214376680096E546 /* Extension-UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIImage.swift"; sourceTree = "<group>"; };
 		2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UINavigationBar.swift"; sourceTree = "<group>"; };
-		2FB26FBF214376680096E546 /* Extension-Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
+		2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Double-Operator.swift"; sourceTree = "<group>"; };
 		2FB26FC0214376680096E546 /* Extension-Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Color.swift"; sourceTree = "<group>"; };
 		2FB26FC2214376680096E546 /* Extension-UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIView.swift"; sourceTree = "<group>"; };
 		2FB26FC5214376680096E546 /* Extension-UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UITextField.swift"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
 		C729C96322C4EF1A00BB365A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C7790E2D24221110001A5900 /* Extension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
 		C78A338522C50B690048EB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-2-Number.swift"; sourceTree = "<group>"; };
 		C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonlyNumber.swift; sourceTree = "<group>"; };
@@ -138,7 +140,8 @@
 				2FB26FBB214376680096E546 /* Extension-String.swift */,
 				2FB26FBC214376680096E546 /* Extension-UIImage.swift */,
 				2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */,
-				2FB26FBF214376680096E546 /* Extension-Double.swift */,
+				2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */,
+				C7790E2D24221110001A5900 /* Extension-Double.swift */,
 				C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */,
 				C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */,
 				C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */,
@@ -301,8 +304,9 @@
 				2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */,
 				2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */,
 				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
+				C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */,
 				C78A338622C50B690048EB09 /* Color.swift in Sources */,
-				2FB26FCA214376680096E546 /* Extension-Double.swift in Sources */,
+				2FB26FCA214376680096E546 /* Extension-Double-Operator.swift in Sources */,
 				C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */,
 				C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */,
 				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
