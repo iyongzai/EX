@@ -78,7 +78,7 @@ public extension Double {
 
 
 public extension Double {
-    func adding(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
+    func adding(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
@@ -90,7 +90,7 @@ public extension Double {
         return resultValue
     }
     
-    func subtracting(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
+    func subtracting(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
@@ -102,7 +102,7 @@ public extension Double {
         return resultValue
     }
     
-    func multiplying(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
+    func multiplying(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
@@ -114,7 +114,7 @@ public extension Double {
         return resultValue
     }
     
-    func dividing(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
+    func dividing(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
