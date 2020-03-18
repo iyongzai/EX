@@ -38,7 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("ee=\(ee)")
         print("ff=\(ff)")
         
-        
+        let a1 = "0.23"
+        let b1 = "88.32"
+        let a1_add_b1 = a1.addingWhenDouble(b1)
+        let a1_sub_b1 = a1.subtractingWhenDouble(b1)
+        let a1_mul_b1 = a1.multiplying(b1)
+        let a1_div_b1 = a1.dividing(b1)
+        print("a1_add_b1=\(a1_add_b1)")
+        print("a1_sub_b1=\(a1_sub_b1)")
+        print("a1_mul_b1=\(a1_mul_b1)")
+        print("a1_div_b1=\(a1_div_b1)")
+
         // Override point for customization after application launch.
         return true
     }

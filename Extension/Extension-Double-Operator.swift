@@ -78,49 +78,49 @@ public extension Double {
 
 
 public extension Double {
-    func adding(_ rhs: Double) -> NSDecimalNumber {
+    func adding(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
         
-        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: baseScale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: scale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         let resultValue = lValue.adding(rValue, withBehavior: handle)
         
         return resultValue
     }
     
-    func subtracting(_ rhs: Double) -> NSDecimalNumber {
+    func subtracting(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
         
-        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: baseScale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: scale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         let resultValue = lValue.subtracting(rValue, withBehavior: handle)
         
         return resultValue
     }
     
-    func multiplying(_ rhs: Double) -> NSDecimalNumber {
+    func multiplying(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
         
-        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: baseScale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: scale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         let resultValue = lValue.multiplying(by: rValue, withBehavior: handle)
         
         return resultValue
     }
     
-    func dividing(_ rhs: Double) -> NSDecimalNumber {
+    func dividing(_ rhs: String, scale: Int16 = baseScale) -> NSDecimalNumber {
         debugPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
         
-        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: baseScale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let handle = NSDecimalNumberHandler.init(roundingMode: .plain, scale: scale, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         let resultValue = lValue.dividing(by: rValue, withBehavior: handle)
         
         return resultValue

@@ -35,6 +35,7 @@
 		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
 		C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96322C4EF1A00BB365A /* Protocol.swift */; };
 		C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2D24221110001A5900 /* Extension-Double.swift */; };
+		C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */; };
 		C78A338622C50B690048EB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A338522C50B690048EB09 /* Color.swift */; };
 		C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */; };
 		C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */; };
@@ -73,6 +74,7 @@
 		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
 		C729C96322C4EF1A00BB365A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		C7790E2D24221110001A5900 /* Extension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
+		C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-Operator.swift"; sourceTree = "<group>"; };
 		C78A338522C50B690048EB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-2-Number.swift"; sourceTree = "<group>"; };
 		C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonlyNumber.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				2FB26FBB214376680096E546 /* Extension-String.swift */,
 				2FB26FBC214376680096E546 /* Extension-UIImage.swift */,
 				2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */,
+				C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */,
 				2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */,
 				C7790E2D24221110001A5900 /* Extension-Double.swift */,
 				C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */,
@@ -312,6 +315,7 @@
 				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
 				C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */,
 				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
+				C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */,
 				2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */,
 				C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */,
 			);
