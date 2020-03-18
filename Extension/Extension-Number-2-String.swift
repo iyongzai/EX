@@ -24,7 +24,7 @@ public extension Double {
         formatter.numberStyle = .decimal
         stringValue = formatter.string(from: NSNumber(value: self))!
         
-        return stringValue
+        return stringValue.trimDecimalTail0()
     }
     
     /// Double类型转String，保留指定小数位，多余的小数位会被舍弃（直接舍弃，非四舍五入）
