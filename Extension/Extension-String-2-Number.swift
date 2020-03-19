@@ -11,24 +11,12 @@ import Foundation
 // MARK: - To Double
 public extension String {
     
-    /// string -> Double
     func toDouble() -> Double? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-        
-        let num = NSDecimalNumber.init(string: self)
-        return num.doubleValue
+        return NumberFormatter().number(from: self)?.doubleValue
     }
     
-    /// string -> Double
     func toDoubleValue() -> Double {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-        
-        let num = NSDecimalNumber.init(string: self)
-        return num.doubleValue
+        return toDouble() ?? 0
     }
 }
 
@@ -37,24 +25,12 @@ public extension String {
 // MARK: - To Float
 public extension String {
     
-    /// string -> Double
     func toFloat() -> Float? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-        
-        let num = NSDecimalNumber.init(string: self)
-        return num.floatValue
+        return NumberFormatter().number(from: self)?.floatValue
     }
     
-    /// string -> Double
     func toFloatValue() -> Float {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-        
-        let num = NSDecimalNumber.init(string: self)
-        return num.floatValue
+        return NumberFormatter().number(from: self)?.floatValue ?? 0
     }
 }
 
@@ -62,192 +38,96 @@ public extension String {
 // MARK: - To Int
 public extension String {
 
-    /// string -> Double
     func toInt() -> Int? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.intValue
+        return NumberFormatter().number(from: self)?.intValue
     }
 
-    /// string -> Double
     func toIntValue() -> Int {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.intValue
+        return NumberFormatter().number(from: self)?.intValue ?? 0
     }
 }
 
 // MARK: - To Int8
 public extension String {
 
-    /// string -> Double
     func toInt8() -> Int8? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int8Value
+        return NumberFormatter().number(from: self)?.int8Value
     }
 
-    /// string -> Double
     func toInt8Value() -> Int8 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int8Value
+        return NumberFormatter().number(from: self)?.int8Value ?? 0
     }
 }
 
 // MARK: - To Int16
 public extension String {
 
-    /// string -> Double
     func toInt16() -> Int16? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int16Value
+        return NumberFormatter().number(from: self)?.int16Value
     }
 
-    /// string -> Double
     func toInt16Value() -> Int16 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int16Value
+        return NumberFormatter().number(from: self)?.int16Value ?? 0
     }
 }
 
 // MARK: - To Int32
 public extension String {
 
-    /// string -> Double
     func toInt32() -> Int32? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int32Value
+        return NumberFormatter().number(from: self)?.int32Value
     }
 
-    /// string -> Double
     func toInt32Value() -> Int32 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int32Value
+        return NumberFormatter().number(from: self)?.int32Value ?? 0
     }
 }
 
 // MARK: - To Int64
 public extension String {
 
-    /// string -> Double
     func toInt64() -> Int64? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int64Value
+        return NumberFormatter().number(from: self)?.int64Value
     }
 
-    /// string -> Double
     func toInt64Value() -> Int64 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.int64Value
+        return NumberFormatter().number(from: self)?.int64Value ?? 0
     }
 }
 
 // MARK: - To UInt
 public extension String {
 
-    /// string -> Double
     func toUInt() -> UInt? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uintValue
+        return NumberFormatter().number(from: self)?.uintValue
     }
 
-    /// string -> Double
     func toUIntValue() -> UInt {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uintValue
+        return NumberFormatter().number(from: self)?.uintValue ?? 0
     }
 }
 
 // MARK: - To UInt8
 public extension String {
 
-    /// string -> Double
     func toUInt8() -> UInt8? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint8Value
+        return NumberFormatter().number(from: self)?.uint8Value
     }
 
-    /// string -> Double
     func toUInt8Value() -> UInt8 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint8Value
+        return NumberFormatter().number(from: self)?.uint8Value ?? 0
     }
 }
 
 // MARK: - To UInt16
 public extension String {
 
-    /// string -> Double
     func toUInt16() -> UInt16? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint16Value
+        return NumberFormatter().number(from: self)?.uint16Value
     }
 
-    /// string -> Double
     func toUInt16Value() -> UInt16 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint16Value
+        return NumberFormatter().number(from: self)?.uint16Value ?? 0
     }
 }
 
@@ -255,47 +135,23 @@ public extension String {
 // MARK: - To UInt32
 public extension String {
 
-    /// string -> Double
     func toUInt32() -> UInt32? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint32Value
+        return NumberFormatter().number(from: self)?.uint32Value
     }
 
-    /// string -> Double
     func toUInt32Value() -> UInt32 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint32Value
+        return NumberFormatter().number(from: self)?.uint32Value ?? 0
     }
 }
 // MARK: - To UInt64
 public extension String {
 
-    /// string -> Double
     func toUInt64() -> UInt64? {
-        guard self.length > 0 else { return nil }
-        guard canConvertToNumber else { return nil }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint64Value
+        return NumberFormatter().number(from: self)?.uint64Value
     }
 
-    /// string -> Double
     func toUInt64Value() -> UInt64 {
-        guard self.length > 0 else {
-            return 0
-        }
-        guard canConvertToNumber else { return 0 }
-
-        let num = NSDecimalNumber.init(string: self)
-        return num.uint64Value
+        return NumberFormatter().number(from: self)?.uint64Value ?? 0
     }
 }
 
@@ -308,7 +164,6 @@ fileprivate let numberFM: NumberFormatter = {
     return f
 }()
 public extension String {
-    /// string -> number
     var canConvertToNumber: Bool {
         get { return numberFM.number(from: self) != nil }
     }
