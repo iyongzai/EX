@@ -15,40 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let a: Double = 0.23
-        let b: Double = 88.32
-        
-        let c = a+b
-        let d = a-b
-        let e = a*b
-        let f = a/b
-        
-        let cc = a.+b
-        let dd = a.-b
-        let ee = a.*b
-        let ff = a./b
-        
-        print("c=\(c)")
-        print("d=\(d)")
-        print("e=\(e)")
-        print("f=\(f)")
-        
-        print("cc=\(cc)")
-        print("dd=\(dd)")
-        print("ee=\(ee)")
-        print("ff=\(ff)")
-        
-        let a1 = "0.23"
-        let b1 = "88.32"
-        let a1_add_b1 = a1.addingWhenDouble(b1)
-        let a1_sub_b1 = a1.subtractingWhenDouble(b1)
-        let a1_mul_b1 = a1.multiplying(b1)
-        let a1_div_b1 = a1.dividing(b1)
-        print("a1_add_b1=\(a1_add_b1)")
-        print("a1_sub_b1=\(a1_sub_b1)")
-        print("a1_mul_b1=\(a1_mul_b1)")
-        print("a1_div_b1=\(a1_div_b1)")
-
         // Override point for customization after application launch.
         return true
     }

@@ -157,6 +157,10 @@ public extension String {
         return self.decimal(forceDigits: UInt(digits))
     }
     
+    func decimal(scale: UInt) -> String {
+        return String.init(format: "%.\(scale)f", self.toDoubleValue())
+    }
+    
     // MARK: - 强制指定需要多少位小数，不够小数位的补0
     /// 强制指定需要多少位小数，不够小数位的补0
     ///
