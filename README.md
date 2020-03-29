@@ -19,5 +19,5 @@ Podfile文件配置：
 
 Swift 4.0  --> pod 'AYSeg', '0.0.7'
 
-Swift 5.0 --> pod 'AYSeg', '0.5.0'
+Swift 5.0 --> pod 'AYSeg', '~> 0.5.0'
 

@@ -11,14 +11,14 @@ import Foundation
 
 public extension String {
     func addingWhenDouble(_ rhs: String, scale: Int16 = baseScale) -> String {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         guard Double(self) != nil else {
-            print("\(self) is not number type")
+            EXPrint("\(self) is not number type")
             return "NaN"
         }
         guard Double(rhs) != nil else {
-            print("\(rhs) is not number type")
+            EXPrint("\(rhs) is not number type")
             return "NaN"
         }
         
@@ -31,14 +31,14 @@ public extension String {
     }
     
     func subtractingWhenDouble(_ rhs: String, scale: Int16 = baseScale) -> String {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         guard Double(self) != nil else {
-            print("\(self) is not number type")
+            EXPrint("\(self) is not number type")
             return "NaN"
         }
         guard Double(rhs) != nil else {
-            print("\(rhs) is not number type")
+            EXPrint("\(rhs) is not number type")
             return "NaN"
         }
         
@@ -51,14 +51,14 @@ public extension String {
     }
     
     func multiplying(_ rhs: String, scale: Int16 = baseScale) -> String {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         guard Double(self) != nil else {
-            print("\(self) is not number type")
+            EXPrint("\(self) is not number type")
             return "NaN"
         }
         guard Double(rhs) != nil else {
-            print("\(rhs) is not number type")
+            EXPrint("\(rhs) is not number type")
             return "NaN"
         }
         
@@ -71,14 +71,14 @@ public extension String {
     }
     
     func dividing(_ rhs: String, scale: Int16 = baseScale) -> String {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         guard Double(self) != nil else {
-            print("\(self) is not number type")
+            EXPrint("\(self) is not number type")
             return "NaN"
         }
         guard Double(rhs) != nil else {
-            print("\(rhs) is not number type")
+            EXPrint("\(rhs) is not number type")
             return "NaN"
         }
         

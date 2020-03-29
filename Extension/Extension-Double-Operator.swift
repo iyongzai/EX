@@ -33,19 +33,19 @@ infix operator ./: AYMultiplicationPrecedence
 
 
 public func .+ (lhs: Double, rhs: Double) -> Double {
-    debugPrint(#file+#function)
+    EXPrint(#file+#function)
     return lhs.adding(rhs).doubleValue
 }
 public func .- (lhs: Double, rhs: Double) -> Double {
-    debugPrint(#file+#function)
+    EXPrint(#file+#function)
     return lhs.subtracting(rhs).doubleValue
 }
 public func .* (lhs: Double, rhs: Double) -> Double {
-    debugPrint(#file+#function)
+    EXPrint(#file+#function)
     return lhs.multiplying(rhs).doubleValue
 }
 public func ./ (lhs: Double, rhs: Double) -> Double {
-    debugPrint(#file+#function)
+    EXPrint(#file+#function)
     return lhs.dividing(rhs).doubleValue
 }
 
@@ -54,22 +54,22 @@ public var baseScale: Int16 = 9
 
 public extension Double {
     static func + (lhs: Double, rhs: Double) -> Double {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         return lhs.adding(rhs).doubleValue
     }
     
     static func - (lhs: Double, rhs: Double) -> Double {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         return lhs.subtracting(rhs).doubleValue
     }
     
     static func * (lhs: Double, rhs: Double) -> Double {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         return lhs.multiplying(rhs).doubleValue
     }
     
     static func / (lhs: Double, rhs: Double) -> Double {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         return lhs.dividing(rhs).doubleValue
     }
 }
@@ -79,7 +79,7 @@ public extension Double {
 
 public extension Double {
     func adding(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
@@ -91,7 +91,7 @@ public extension Double {
     }
     
     func subtracting(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
@@ -103,7 +103,7 @@ public extension Double {
     }
     
     func multiplying(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)
@@ -115,7 +115,7 @@ public extension Double {
     }
     
     func dividing(_ rhs: Double, scale: Int16 = baseScale) -> NSDecimalNumber {
-        debugPrint(#file+#function)
+        EXPrint(#file+#function)
         
         let lValue = NSDecimalNumber(value: self)
         let rValue = NSDecimalNumber(value: rhs)

@@ -34,6 +34,7 @@
 		C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */; };
 		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
 		C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96322C4EF1A00BB365A /* Protocol.swift */; };
+		C74740F324304F080008FBBD /* EXLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74740F224304F080008FBBD /* EXLog.swift */; };
 		C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2D24221110001A5900 /* Extension-Double.swift */; };
 		C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */; };
 		C78A338622C50B690048EB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A338522C50B690048EB09 /* Color.swift */; };
@@ -73,6 +74,7 @@
 		C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
 		C729C96322C4EF1A00BB365A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C74740F224304F080008FBBD /* EXLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXLog.swift; sourceTree = "<group>"; };
 		C7790E2D24221110001A5900 /* Extension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
 		C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-Operator.swift"; sourceTree = "<group>"; };
 		C78A338522C50B690048EB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				C729C95D22C4790C00BB365A /* Extension-Range.swift */,
 				C729C96122C4CD1400BB365A /* Extension-Date.swift */,
 				C729C96322C4EF1A00BB365A /* Protocol.swift */,
+				C74740F224304F080008FBBD /* EXLog.swift */,
 			);
 			name = Extension;
 			path = ../Extension;
@@ -308,6 +311,7 @@
 				2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */,
 				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
 				C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */,
+				C74740F324304F080008FBBD /* EXLog.swift in Sources */,
 				C78A338622C50B690048EB09 /* Color.swift in Sources */,
 				2FB26FCA214376680096E546 /* Extension-Double-Operator.swift in Sources */,
 				C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */,
