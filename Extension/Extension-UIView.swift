@@ -114,20 +114,6 @@ extension UIView {
     }
 }
 
-extension UIButton {
-    //MARK: - Button在IB上添加设置标题自适应宽度
-    /// Button在IB上添加设置标题自适应宽度
-    @IBInspectable
-    public var ayAdjustsFontSizeToFitWidth: Bool {
-        get {
-            return titleLabel?.adjustsFontSizeToFitWidth ?? false
-        }
-        // also  set(newValue)
-        set {
-            titleLabel?.adjustsFontSizeToFitWidth = newValue
-        }
-    }
-}
 
 extension UIView {
     // MARK: - 设置阴影

@@ -8,6 +8,15 @@
 
 import Foundation
 
+fileprivate let doubleToStringFM: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.usesSignificantDigits = true
+    formatter.maximumSignificantDigits = 25
+    formatter.groupingSeparator = ""
+    formatter.numberStyle = .decimal
+    
+    return formatter
+}()
 // MARK: - Double
 public extension Double {
     /// Double类型转String（可修正精度问题）
@@ -16,14 +25,7 @@ public extension Double {
     func toString() -> String
     {
         var stringValue : String = "0.00"
-        
-        let formatter = NumberFormatter()
-        formatter.usesSignificantDigits = true
-        formatter.maximumSignificantDigits = 25
-        formatter.groupingSeparator = ""
-        formatter.numberStyle = .decimal
-        stringValue = formatter.string(from: NSNumber(value: self))!
-        
+        stringValue = doubleToStringFM.string(from: NSNumber(value: self))!
         return stringValue.trimDecimalTail0()
     }
     

@@ -12,7 +12,7 @@ import Foundation
 public extension String {
     
     func toDouble() -> Double? {
-        return NumberFormatter().number(from: self)?.doubleValue
+        return stringToDoubleFM.number(from: self)?.doubleValue
     }
     
     func toDoubleValue() -> Double {
@@ -26,11 +26,11 @@ public extension String {
 public extension String {
     
     func toFloat() -> Float? {
-        return NumberFormatter().number(from: self)?.floatValue
+        return stringToDoubleFM.number(from: self)?.floatValue
     }
     
     func toFloatValue() -> Float {
-        return NumberFormatter().number(from: self)?.floatValue ?? 0
+        return stringToDoubleFM.number(from: self)?.floatValue ?? 0
     }
 }
 
@@ -39,11 +39,11 @@ public extension String {
 public extension String {
 
     func toInt() -> Int? {
-        return NumberFormatter().number(from: self)?.intValue
+        return stringToDoubleFM.number(from: self)?.intValue
     }
 
     func toIntValue() -> Int {
-        return NumberFormatter().number(from: self)?.intValue ?? 0
+        return stringToDoubleFM.number(from: self)?.intValue ?? 0
     }
 }
 
@@ -51,11 +51,11 @@ public extension String {
 public extension String {
 
     func toInt8() -> Int8? {
-        return NumberFormatter().number(from: self)?.int8Value
+        return stringToDoubleFM.number(from: self)?.int8Value
     }
 
     func toInt8Value() -> Int8 {
-        return NumberFormatter().number(from: self)?.int8Value ?? 0
+        return stringToDoubleFM.number(from: self)?.int8Value ?? 0
     }
 }
 
@@ -63,11 +63,11 @@ public extension String {
 public extension String {
 
     func toInt16() -> Int16? {
-        return NumberFormatter().number(from: self)?.int16Value
+        return stringToDoubleFM.number(from: self)?.int16Value
     }
 
     func toInt16Value() -> Int16 {
-        return NumberFormatter().number(from: self)?.int16Value ?? 0
+        return stringToDoubleFM.number(from: self)?.int16Value ?? 0
     }
 }
 
@@ -75,11 +75,11 @@ public extension String {
 public extension String {
 
     func toInt32() -> Int32? {
-        return NumberFormatter().number(from: self)?.int32Value
+        return stringToDoubleFM.number(from: self)?.int32Value
     }
 
     func toInt32Value() -> Int32 {
-        return NumberFormatter().number(from: self)?.int32Value ?? 0
+        return stringToDoubleFM.number(from: self)?.int32Value ?? 0
     }
 }
 
@@ -87,11 +87,11 @@ public extension String {
 public extension String {
 
     func toInt64() -> Int64? {
-        return NumberFormatter().number(from: self)?.int64Value
+        return stringToDoubleFM.number(from: self)?.int64Value
     }
 
     func toInt64Value() -> Int64 {
-        return NumberFormatter().number(from: self)?.int64Value ?? 0
+        return stringToDoubleFM.number(from: self)?.int64Value ?? 0
     }
 }
 
@@ -99,11 +99,11 @@ public extension String {
 public extension String {
 
     func toUInt() -> UInt? {
-        return NumberFormatter().number(from: self)?.uintValue
+        return stringToDoubleFM.number(from: self)?.uintValue
     }
 
     func toUIntValue() -> UInt {
-        return NumberFormatter().number(from: self)?.uintValue ?? 0
+        return stringToDoubleFM.number(from: self)?.uintValue ?? 0
     }
 }
 
@@ -111,11 +111,11 @@ public extension String {
 public extension String {
 
     func toUInt8() -> UInt8? {
-        return NumberFormatter().number(from: self)?.uint8Value
+        return stringToDoubleFM.number(from: self)?.uint8Value
     }
 
     func toUInt8Value() -> UInt8 {
-        return NumberFormatter().number(from: self)?.uint8Value ?? 0
+        return stringToDoubleFM.number(from: self)?.uint8Value ?? 0
     }
 }
 
@@ -123,11 +123,11 @@ public extension String {
 public extension String {
 
     func toUInt16() -> UInt16? {
-        return NumberFormatter().number(from: self)?.uint16Value
+        return stringToDoubleFM.number(from: self)?.uint16Value
     }
 
     func toUInt16Value() -> UInt16 {
-        return NumberFormatter().number(from: self)?.uint16Value ?? 0
+        return stringToDoubleFM.number(from: self)?.uint16Value ?? 0
     }
 }
 
@@ -136,25 +136,27 @@ public extension String {
 public extension String {
 
     func toUInt32() -> UInt32? {
-        return NumberFormatter().number(from: self)?.uint32Value
+        return stringToDoubleFM.number(from: self)?.uint32Value
     }
 
     func toUInt32Value() -> UInt32 {
-        return NumberFormatter().number(from: self)?.uint32Value ?? 0
+        return stringToDoubleFM.number(from: self)?.uint32Value ?? 0
     }
 }
 // MARK: - To UInt64
 public extension String {
 
     func toUInt64() -> UInt64? {
-        return NumberFormatter().number(from: self)?.uint64Value
+        return stringToDoubleFM.number(from: self)?.uint64Value
     }
 
     func toUInt64Value() -> UInt64 {
-        return NumberFormatter().number(from: self)?.uint64Value ?? 0
+        return stringToDoubleFM.number(from: self)?.uint64Value ?? 0
     }
 }
 
+
+fileprivate let stringToDoubleFM = NumberFormatter()
 
 // MARK: - canConvertToNumber
 fileprivate let numberFM: NumberFormatter = {
