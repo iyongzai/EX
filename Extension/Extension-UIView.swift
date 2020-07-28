@@ -45,6 +45,21 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    public func ayPartCorner(_ corner: UIRectCorner, radius: CGFloat) {
+        if #available(iOS 11.0, *) {
+            self.layer.cornerRadius = radius
+            self.layer.maskedCorners = CACornerMask.init(rawValue: corner.rawValue)
+        } else {
+            let path = UIBezierPath.init(roundedRect: self.bounds,
+                                         byRoundingCorners: corner,
+                                         cornerRadii: CGSize.init(width: radius, height: radius))
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = self.bounds
+            maskLayer.path = path.cgPath
+            self.layer.mask = maskLayer
+        }
+    }
 }
 
 // MARK: - 扩展toast功能：上面图片，下面文字
