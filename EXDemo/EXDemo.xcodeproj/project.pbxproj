@@ -31,6 +31,7 @@
 		2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FD12143789F0096E546 /* Extension-Array.swift */; };
 		7ACAC0A674E892A985721ED6 /* Pods_EXDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3279FBE1C0ADF15EF6364C9C /* Pods_EXDemo.framework */; };
 		C711E7AB2442BC21000CC921 /* Extension-UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */; };
+		C71BDD0F24DC0F6D00CCADB8 /* Extension-UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */; };
 		C729C95E22C4790C00BB365A /* Extension-Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95D22C4790C00BB365A /* Extension-Range.swift */; };
 		C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */; };
 		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
@@ -72,6 +73,7 @@
 		2FB26FD12143789F0096E546 /* Extension-Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Array.swift"; sourceTree = "<group>"; };
 		3279FBE1C0ADF15EF6364C9C /* Pods_EXDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EXDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UIButton.swift"; sourceTree = "<group>"; };
+		C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UILabel.swift"; sourceTree = "<group>"; };
 		C729C95D22C4790C00BB365A /* Extension-Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Range.swift"; sourceTree = "<group>"; };
 		C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				2FB26FC0214376680096E546 /* Extension-Color.swift */,
 				2FB26FC2214376680096E546 /* Extension-UIView.swift */,
 				C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */,
+				C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */,
 				2FB26FC5214376680096E546 /* Extension-UITextField.swift */,
 				2FB26FD12143789F0096E546 /* Extension-Array.swift */,
 				C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */,
@@ -321,6 +324,7 @@
 				C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */,
 				C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */,
 				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
+				C71BDD0F24DC0F6D00CCADB8 /* Extension-UILabel.swift in Sources */,
 				C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */,
 				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
 				C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */,

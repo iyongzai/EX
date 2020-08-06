@@ -26,7 +26,28 @@ extension UIButton {
 
 
 public extension UIButton {
-    func aySetBorderColor(_ color: UIColor?, for state: UIControl.State) {
-        
+//    func aySetBorderColor(_ color: UIColor?, for state: UIControl.State) {
+//
+//    }
+    func noDoubleClick() {
+        guard self.isUserInteractionEnabled else { return }
+        self.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now()+1, execute: {
+            self.isUserInteractionEnabled = true
+        })
+    }
+    
+    func setUnderline() {
+        guard currentAttributedTitle != nil || currentTitle != nil else { return }
+        var title = NSMutableAttributedString()
+        if currentAttributedTitle != nil {
+            title.append(currentAttributedTitle!)
+        }else{
+            title = NSMutableAttributedString(string: currentTitle!)
+        }
+        title.addAttribute(NSAttributedString.Key.underlineStyle,
+                           value: NSNumber.init(value: NSUnderlineStyle.single.rawValue),
+                           range: NSRange.init(location: 0, length: title.length))
+        self.setAttributedTitle(title, for: .normal)
     }
 }
