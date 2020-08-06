@@ -8,6 +8,111 @@
 
 import UIKit
 
+extension UITextField {
+    func setText(_ text: String?) -> Self {
+        self.text = text
+        return self
+    }
+    func setAttributedText(_ attributedText: NSAttributedString?) -> Self {
+        self.attributedText = attributedText
+        return self
+    }
+    func setTextColor(_ textColor: UIColor?) -> Self {
+        self.textColor = textColor
+        return self
+    }
+    func setFont(_ font: UIFont?) -> Self {
+        self.font = font
+        return self
+    }
+    func setTextAlignment(_ textAlignment: NSTextAlignment) -> Self {
+        self.textAlignment = textAlignment
+        return self
+    }
+    func setBorderStyle(_ borderStyle: UITextField.BorderStyle) -> Self {
+        self.borderStyle = borderStyle
+        return self
+    }
+    func setDefaultTextAttributes(_ defaultTextAttributes: [NSAttributedString.Key : Any]) -> Self {
+        self.defaultTextAttributes = defaultTextAttributes
+        return self
+    }
+    func setPlaceholder(_ placeholder: String?) -> Self {
+        self.placeholder = placeholder
+        return self
+    }
+    func setAttributedPlaceholder(_ attributedPlaceholder: NSAttributedString?) -> Self {
+        self.attributedPlaceholder = attributedPlaceholder
+        return self
+    }
+    func setAdjustsFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> Self {
+        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        return self
+    }
+    func setClearsOnBeginEditing(_ clearsOnBeginEditing: Bool) -> Self {
+        self.clearsOnBeginEditing = clearsOnBeginEditing
+        return self
+    }
+    func setMinimumFontSize(_ minimumFontSize: CGFloat) -> Self {
+        self.minimumFontSize = minimumFontSize
+        return self
+    }
+    func setDelegate(_ delegate: UITextFieldDelegate?) -> Self {
+        self.delegate = delegate
+        return self
+    }
+    func setBackground(_ background: UIImage?) -> Self {
+        self.background = background
+        return self
+    }
+    func setDisabledBackground(_ disabledBackground: UIImage?) -> Self {
+        self.disabledBackground = disabledBackground
+        return self
+    }
+    func setAllowsEditingTextAttributes(_ allowsEditingTextAttributes: Bool) -> Self {
+        self.allowsEditingTextAttributes = allowsEditingTextAttributes
+        return self
+    }
+    func setTypingAttributes(_ typingAttributes: [NSAttributedString.Key : Any]?) -> Self {
+        self.typingAttributes = typingAttributes
+        return self
+    }
+    func setClearButtonMode(_ clearButtonMode: UITextField.ViewMode) -> Self {
+        self.clearButtonMode = clearButtonMode
+        return self
+    }
+    func setLeftView(_ leftView: UIView?) -> Self {
+        self.leftView = leftView
+        return self
+    }
+    func setLeftViewMode(_ leftViewMode: UITextField.ViewMode) -> Self {
+        self.leftViewMode = leftViewMode
+        return self
+    }
+    func setRightView(_ rightView: UIView?) -> Self {
+        self.rightView = rightView
+        return self
+    }
+    func setRightViewMode(_ rightViewMode: UITextField.ViewMode) -> Self {
+        self.rightViewMode = rightViewMode
+        return self
+    }
+    func setInputView(_ inputView: UIView?) -> Self {
+        self.inputView = inputView
+        return self
+    }
+    func setInputAccessoryView(_ inputAccessoryView: UIView?) -> Self {
+        self.inputAccessoryView = inputAccessoryView
+        return self
+    }
+    func setClearsOnInsertion(_ clearsOnInsertion: Bool) -> Self {
+        self.clearsOnInsertion = clearsOnInsertion
+        return self
+    }
+}
+
+
+
 
 // MARK: - leftView & rightView
 extension UITextField {
