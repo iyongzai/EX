@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension DispatchQueue {
-    public func safeSync(execute block: () -> Void) {
+public extension DispatchQueue {
+    func safeSync(execute block: () -> Void) {
         guard self == DispatchQueue.main else {
             self.sync(execute: block)
             return

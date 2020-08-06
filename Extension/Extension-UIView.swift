@@ -147,7 +147,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     ///响应链 控制器
     var viewController: UIViewController? {
         var next = superview

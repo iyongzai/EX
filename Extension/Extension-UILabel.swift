@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UILabel {
+public extension UILabel {
     func setText(_ text: String?) -> Self {
         self.text = text
         return self
@@ -82,7 +82,7 @@ extension UILabel {
 
 
 
-extension UILabel {
+public extension UILabel {
     func setUnderline() {
         guard text != nil else { return }
         let title = NSMutableAttributedString(string: text!)
