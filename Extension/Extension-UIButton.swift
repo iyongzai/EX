@@ -43,7 +43,7 @@ public extension UIButton {
         if currentAttributedTitle != nil {
             title.append(currentAttributedTitle!)
         }else{
-            title = NSMutableAttributedString(string: currentTitle!)
+            title = NSMutableAttributedString(string: currentTitle!, attributes: [NSAttributedString.Key.foregroundColor : currentTitleColor])
         }
         title.addAttribute(NSAttributedString.Key.underlineStyle,
                            value: NSNumber.init(value: NSUnderlineStyle.single.rawValue),
