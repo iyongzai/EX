@@ -85,7 +85,7 @@ public extension UILabel {
 public extension UILabel {
     func setUnderline() {
         guard text != nil else { return }
-        let title = NSMutableAttributedString(string: text!)
+        let title = NSMutableAttributedString(string: text!, attributes: [NSAttributedString.Key.foregroundColor : textColor!])
         title.addAttribute(NSAttributedString.Key.underlineStyle,
                            value: NSNumber.init(value: NSUnderlineStyle.single.rawValue),
                            range: NSRange.init(location: 0, length: title.length))
