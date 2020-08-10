@@ -51,3 +51,32 @@ public extension UIButton {
         self.setAttributedTitle(title, for: .normal)
     }
 }
+
+// MARK: - loading
+public extension UIButton {
+    func showLoading() {
+        self.setTitleColor(UIColor.clear, for: .disabled)
+        self.isEnabled = false
+        var loadingView: UIActivityIndicatorView! = self.viewWithTag(891112) as? UIActivityIndicatorView
+        if loadingView != nil {
+            if !loadingView.isAnimating {
+                loadingView.startAnimating()
+            }
+            return
+        }else{
+            loadingView = UIActivityIndicatorView.init(style: .white)
+            loadingView.tag = 891112
+            loadingView.center = CGPoint.init(x: self.bounds.width/2, y: self.bounds.height/2)
+            self.addSubview(loadingView)
+            loadingView.startAnimating()
+        }
+    }
+    func hideLoading() {
+        self.isEnabled = true
+        guard let loadingView = self.viewWithTag(891112) as? UIActivityIndicatorView else { return }
+        if loadingView.isAnimating {
+            loadingView.stopAnimating()
+        }
+        loadingView.removeFromSuperview()
+    }
+}
