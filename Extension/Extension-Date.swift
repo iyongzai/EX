@@ -24,3 +24,12 @@ extension Date {
         return Date.init(timeIntervalSince1970: self.timeIntervalSince1970-3600*24)
     }
 }
+
+extension Date {
+    public func secondsOffset(endDate: Date) -> Int {
+        let gregorian = Calendar.init(identifier: .gregorian)
+        let comps = gregorian.dateComponents([Calendar.Component.second], from: self, to: endDate)
+        let second = comps.second
+        return second ?? 0
+    }
+}
