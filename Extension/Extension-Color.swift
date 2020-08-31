@@ -15,11 +15,24 @@ extension String {
     ///
     /// - Returns: UIColor
     public func uiColor(alpha: CGFloat = 1.0) -> UIColor {
+        guard self.count >= 6 else {
+            #if DEBUG
+            assert(false, "十六进制颜色转换为UIColor--格式错误")
+            #endif
+            return UIColor.clear
+        }
         
         var hexColorString = self
-        
-        if hexColorString.contains("#") {
-            hexColorString = hexColorString[1..<7]
+        if hexColorString.uppercased().hasPrefix("0X") {
+            hexColorString = hexColorString.subString(start: 2)
+        }else if hexColorString.hasPrefix("#") {
+            hexColorString = hexColorString.subString(start: 1)
+        }
+        if hexColorString.count != 6 {
+            #if DEBUG
+            assert(false, "十六进制颜色转换为UIColor--格式错误")
+            #endif
+            return UIColor.clear
         }
         
         // 存储转换后的数值
