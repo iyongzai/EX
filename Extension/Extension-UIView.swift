@@ -161,3 +161,56 @@ public extension UIView {
         return nil
     }
 }
+
+
+// MARK: - rect, size, width, height, x, y, center, top, left, bottom, right
+public extension UIView {
+    var top: CGFloat {
+        get { return self.frame.origin.y }
+        set { self.frame.origin.y = newValue }
+    }
+    var bottom: CGFloat {
+        get { return self.frame.size.height + self.frame.origin.y }
+        set { self.frame.origin.y = newValue - frame.size.height }
+    }
+    var left: CGFloat {
+        get { return self.frame.origin.x }
+        set { self.frame.origin.x = newValue }
+    }
+    var right: CGFloat {
+        get { return self.frame.size.width + self.frame.origin.x }
+        set { self.frame.origin.x = newValue - frame.size.width }
+    }
+    var x: CGFloat {
+        get { return self.frame.origin.x }
+        set { self.frame.origin.x = newValue }
+    }
+    var y: CGFloat {
+        get { return self.frame.origin.y }
+        set { self.frame.origin.y = newValue }
+    }
+    var origin: CGPoint {
+        get { return self.frame.origin }
+        set { self.frame.origin = newValue }
+    }
+    var centerX: CGFloat {
+        get { return self.center.x }
+        set { self.center.x = newValue }
+    }
+    var centerY: CGFloat {
+        get { return self.center.y }
+        set { self.center.y = newValue }
+    }
+    var width: CGFloat {
+        get { return self.frame.size.width }
+        set { self.frame.size.width = newValue }
+    }
+    var height: CGFloat {
+        get { return self.frame.size.height }
+        set { self.frame.size.height = newValue }
+    }
+    var size: CGSize {
+        get { return self.frame.size }
+        set { self.frame.size = newValue }
+    }
+}
