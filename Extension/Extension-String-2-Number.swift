@@ -156,14 +156,20 @@ public extension String {
 }
 
 
-fileprivate let stringToDoubleFM = NumberFormatter()
+fileprivate let stringToDoubleFM: NumberFormatter = {
+    let fm = NumberFormatter()
+    fm.decimalSeparator = "."
+    
+    return fm
+}()
 
 // MARK: - canConvertToNumber
 fileprivate let numberFM: NumberFormatter = {
-    let f = NumberFormatter()
-    f.numberStyle = .decimal
+    let fm = NumberFormatter()
+    fm.numberStyle = .decimal
+    fm.decimalSeparator = "."
     
-    return f
+    return fm
 }()
 public extension String {
     var canConvertToNumber: Bool {

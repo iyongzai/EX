@@ -14,6 +14,7 @@ fileprivate let doubleToStringFM: NumberFormatter = {
     formatter.maximumSignificantDigits = 25
     formatter.groupingSeparator = ""
     formatter.numberStyle = .decimal
+    formatter.decimalSeparator = "."
     
     return formatter
 }()
