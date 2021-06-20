@@ -4,7 +4,7 @@ use_frameworks!
 target:EXDemo do
 
 pod 'SnapKit'
-
+pod 'EX', :path => '../'
 
 
 end

@@ -1,0 +1,50 @@
+#### 问题：
+
+let a = "14159265358979323846264338327950288419"
+
+let b = "0.1"
+
+1. 求a+b，并保留8位小数，多余的切割处理
+2. 求a+b，并保留最精确的小数
+3. 求a+b，并保留最粗略的小数(a和b最短的小数位)，多余的切割处理
+4. 如果a的小数点分隔符是逗号(",")而不是圆点(".")，b还是圆点，求上面3个问题的答案
+
+解：
+
+1. 
+```swift
+let c1: String = a.adding(numberString: b, scale: 8, roundingMode: .down)
+let c2: NSDecimalNumber = a.adding(numberString: b, scale: 8, roundingMode: .down)
+```
+
+   
+
+2. 
+```swift
+let d = a.addingByAutoScale(numberString: b)
+```
+
+   
+
+3. 
+```swift
+let e = a.addingByAutoScale(numberString: b, autoScaleMode: .min, roundingMode: .down)
+```
+
+   
+
+4. 
+```swift
+let c1: String = a.adding(numberString: b, selfDecimalSeparator: DecimalSeparator.comma, rhsDecimalSeparator: DecimalSeparator.default, scale: 8, roundingMode: .down)
+
+let c2: NSDecimalNumber = a.adding(numberString: b, selfLocale: String.locale(decimalSeparator: DecimalSeparator.comma), rhsLocale: String.locale(decimalSeparator: DecimalSeparator.default), scale: 8, roundingMode: .down)
+
+let d = a.addingByAutoScale(numberString: b, selfDecimalSeparator: DecimalSeparator.comma, rhsDecimalSeparator: DecimalSeparator.default, autoScaleMode: .max)
+
+let e = a.addingByAutoScale(numberString: b, selfDecimalSeparator: DecimalSeparator.comma, rhsDecimalSeparator: DecimalSeparator.default, autoScaleMode: .min, roundingMode: .down)
+```
+
+
+
+a-b、a*b、a/b 各自对应方法前缀subtracting、multiplying、dividing，具体的方法用法请查看注释
+

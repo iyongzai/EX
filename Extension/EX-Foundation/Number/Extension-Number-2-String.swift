@@ -23,10 +23,8 @@ public extension Double {
     /// Double类型转String（可修正精度问题）
     ///
     /// - Returns: String
-    func toString() -> String
-    {
-        var stringValue : String = "0.00"
-        stringValue = doubleToStringFM.string(from: NSNumber(value: self))!
+    func fixToString() -> String {
+        let stringValue = doubleToStringFM.string(from: NSNumber(value: self))!
         return stringValue.trimDecimalTail0()
     }
     
@@ -35,7 +33,7 @@ public extension Double {
     /// - Parameter maxLength: 最大小数位
     /// - Returns: String
     func toString(maxLength: Int16 = 8) -> String {
-        var result = self.toString()
+        var result = self.fixToString()
         guard result.contains(".") else {
             return result
         }
@@ -57,88 +55,50 @@ public extension Double {
     func toKString(kLength: Int16 = 2, forceDecimalDigits: Int16? = nil) -> String {
         guard self > 1000 else {
             if forceDecimalDigits != nil {
-                return self.toString().decimal(forceDigits: UInt(forceDecimalDigits!))
+                return self.fixToString().decimal(forceDigits: UInt(forceDecimalDigits!))
             }
-            return self.toString()
+            return self.fixToString()
         }
         return (self/1000).toString(maxLength:kLength) + "k"
     }
 }
 
-// MARK: - Float
+public extension Double {
+    func toString() -> String { "\(self)" }
+}
+public extension CGFloat {
+    func toString() -> String { "\(self)" }
+}
 public extension Float {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - Int
 public extension Int {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - Int8
 public extension Int8 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - Int16
 public extension Int16 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - Int32
 public extension Int32 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - Int64
 public extension Int64 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-
-// MARK: - UInt
 public extension UInt {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - UInt8
 public extension UInt8 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - UInt16
 public extension UInt16 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - UInt32
 public extension UInt32 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }
-
-// MARK: - UInt64
 public extension UInt64 {
-    func toString() -> String {
-        return "\(self)"
-    }
+    func toString() -> String { "\(self)" }
 }

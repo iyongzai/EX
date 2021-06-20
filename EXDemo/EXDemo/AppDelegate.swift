@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EX
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let aaa: Double = 0.89
+        let bbb: Float = 0.66
+        let ccc: CGFloat = 0.88
+        let ddd: Int = 100
+        
+        
+        let timestamp3 = Date().timeIntervalSince1970
+        for i in 0...10000000 {
+            //let aaaa = aaa.toString()
+            let bbbb = bbb.toString()
+            let dddd = ddd.toString()
+        }
+        let timestamp4 = Date().timeIntervalSince1970
+        print("timestamp4-timestamp3=\(timestamp4-timestamp3)")
+                
         return true
     }
 

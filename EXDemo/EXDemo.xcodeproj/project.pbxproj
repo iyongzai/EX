@@ -21,29 +21,10 @@
 		2FB26FAE21436C2F0096E546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FAC21436C2F0096E546 /* Main.storyboard */; };
 		2FB26FB021436C320096E546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FAF21436C320096E546 /* Assets.xcassets */; };
 		2FB26FB321436C320096E546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB26FB121436C320096E546 /* LaunchScreen.storyboard */; };
-		2FB26FC6214376680096E546 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBB214376680096E546 /* Extension-String.swift */; };
-		2FB26FC7214376680096E546 /* Extension-UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBC214376680096E546 /* Extension-UIImage.swift */; };
-		2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */; };
-		2FB26FCA214376680096E546 /* Extension-Double-Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */; };
-		2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC0214376680096E546 /* Extension-Color.swift */; };
-		2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC2214376680096E546 /* Extension-UIView.swift */; };
-		2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FC5214376680096E546 /* Extension-UITextField.swift */; };
-		2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB26FD12143789F0096E546 /* Extension-Array.swift */; };
 		7ACAC0A674E892A985721ED6 /* Pods_EXDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3279FBE1C0ADF15EF6364C9C /* Pods_EXDemo.framework */; };
-		C711E7AB2442BC21000CC921 /* Extension-UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */; };
-		C71BDD0F24DC0F6D00CCADB8 /* Extension-UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */; };
-		C71BDD1324DC127400CCADB8 /* Extension-Dispatch-Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71BDD1224DC127400CCADB8 /* Extension-Dispatch-Queue.swift */; };
-		C729C95E22C4790C00BB365A /* Extension-Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95D22C4790C00BB365A /* Extension-Range.swift */; };
-		C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */; };
-		C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96122C4CD1400BB365A /* Extension-Date.swift */; };
-		C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C729C96322C4EF1A00BB365A /* Protocol.swift */; };
-		C74740F324304F080008FBBD /* EXLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74740F224304F080008FBBD /* EXLog.swift */; };
-		C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2D24221110001A5900 /* Extension-Double.swift */; };
-		C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */; };
+		C737B858267F1794007A4D21 /* 扩展String-数字计算.txt in Resources */ = {isa = PBXBuildFile; fileRef = C737B857267F1794007A4D21 /* 扩展String-数字计算.txt */; };
+		C737B85B267F61BE007A4D21 /* NumberValue.txt in Resources */ = {isa = PBXBuildFile; fileRef = C737B85A267F61BE007A4D21 /* NumberValue.txt */; };
 		C78A338622C50B690048EB09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A338522C50B690048EB09 /* Color.swift */; };
-		C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */; };
-		C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */; };
-		C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,29 +45,10 @@
 		2FB26FAF21436C320096E546 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB26FB221436C320096E546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FB26FB421436C320096E546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FB26FBB214376680096E546 /* Extension-String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
-		2FB26FBC214376680096E546 /* Extension-UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIImage.swift"; sourceTree = "<group>"; };
-		2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UINavigationBar.swift"; sourceTree = "<group>"; };
-		2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Double-Operator.swift"; sourceTree = "<group>"; };
-		2FB26FC0214376680096E546 /* Extension-Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Color.swift"; sourceTree = "<group>"; };
-		2FB26FC2214376680096E546 /* Extension-UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UIView.swift"; sourceTree = "<group>"; };
-		2FB26FC5214376680096E546 /* Extension-UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-UITextField.swift"; sourceTree = "<group>"; };
-		2FB26FD12143789F0096E546 /* Extension-Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Array.swift"; sourceTree = "<group>"; };
 		3279FBE1C0ADF15EF6364C9C /* Pods_EXDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EXDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UIButton.swift"; sourceTree = "<group>"; };
-		C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UILabel.swift"; sourceTree = "<group>"; };
-		C71BDD1224DC127400CCADB8 /* Extension-Dispatch-Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Dispatch-Queue.swift"; sourceTree = "<group>"; };
-		C729C95D22C4790C00BB365A /* Extension-Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Range.swift"; sourceTree = "<group>"; };
-		C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-NSLayoutConstraint.swift"; sourceTree = "<group>"; };
-		C729C96122C4CD1400BB365A /* Extension-Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension-Date.swift"; sourceTree = "<group>"; };
-		C729C96322C4EF1A00BB365A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		C74740F224304F080008FBBD /* EXLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXLog.swift; sourceTree = "<group>"; };
-		C7790E2D24221110001A5900 /* Extension-Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Double.swift"; sourceTree = "<group>"; };
-		C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-Operator.swift"; sourceTree = "<group>"; };
+		C737B857267F1794007A4D21 /* 扩展String-数字计算.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "扩展String-数字计算.txt"; sourceTree = "<group>"; };
+		C737B85A267F61BE007A4D21 /* NumberValue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NumberValue.txt; sourceTree = "<group>"; };
 		C78A338522C50B690048EB09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String-2-Number.swift"; sourceTree = "<group>"; };
-		C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonlyNumber.swift; sourceTree = "<group>"; };
-		C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Number-2-String.swift"; sourceTree = "<group>"; };
 		EDEF919788C8D45ECEF374D1 /* Pods-EXDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EXDemo/Pods-EXDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				2FB26FA721436C2F0096E546 /* EXDemo */,
-				2FB26FBA214376680096E546 /* Extension */,
 				2FB26FA621436C2F0096E546 /* Products */,
 				91E9258FA8727EA3CDC711BF /* Pods */,
 				AEC98906FA0E101500D6DDB4 /* Frameworks */,
@@ -132,6 +93,8 @@
 				2FB26FAF21436C320096E546 /* Assets.xcassets */,
 				2FB26FB121436C320096E546 /* LaunchScreen.storyboard */,
 				2FB26FB421436C320096E546 /* Info.plist */,
+				C737B85A267F61BE007A4D21 /* NumberValue.txt */,
+				C737B857267F1794007A4D21 /* 扩展String-数字计算.txt */,
 				2F36ACEE2143E723003DB8E0 /* 扩展String介绍.txt */,
 				2F36ACF22143E991003DB8E0 /* 扩展Array介绍.txt */,
 				2F36ACF02143E991003DB8E0 /* 扩展Color介绍.txt */,
@@ -142,35 +105,6 @@
 				2F36ACF12143E991003DB8E0 /* 扩展UIView介绍.txt */,
 			);
 			path = EXDemo;
-			sourceTree = "<group>";
-		};
-		2FB26FBA214376680096E546 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				2FB26FBB214376680096E546 /* Extension-String.swift */,
-				2FB26FBC214376680096E546 /* Extension-UIImage.swift */,
-				2FB26FBE214376680096E546 /* Extension-UINavigationBar.swift */,
-				C7790E2F24222CFE001A5900 /* Extension-String-Operator.swift */,
-				2FB26FBF214376680096E546 /* Extension-Double-Operator.swift */,
-				C7790E2D24221110001A5900 /* Extension-Double.swift */,
-				C7FFCD08241F971E00802328 /* Extension-String-2-Number.swift */,
-				C7FFCD0C241FAE8600802328 /* Extension-Number-2-String.swift */,
-				C7FFCD0A241F9ADA00802328 /* CommonlyNumber.swift */,
-				2FB26FC0214376680096E546 /* Extension-Color.swift */,
-				2FB26FC2214376680096E546 /* Extension-UIView.swift */,
-				C711E7AA2442BC21000CC921 /* Extension-UIButton.swift */,
-				C71BDD0E24DC0F6D00CCADB8 /* Extension-UILabel.swift */,
-				2FB26FC5214376680096E546 /* Extension-UITextField.swift */,
-				2FB26FD12143789F0096E546 /* Extension-Array.swift */,
-				C729C95F22C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift */,
-				C729C95D22C4790C00BB365A /* Extension-Range.swift */,
-				C729C96122C4CD1400BB365A /* Extension-Date.swift */,
-				C729C96322C4EF1A00BB365A /* Protocol.swift */,
-				C74740F224304F080008FBBD /* EXLog.swift */,
-				C71BDD1224DC127400CCADB8 /* Extension-Dispatch-Queue.swift */,
-			);
-			name = Extension;
-			path = ../Extension;
 			sourceTree = "<group>";
 		};
 		91E9258FA8727EA3CDC711BF /* Pods */ = {
@@ -254,12 +188,14 @@
 				2FB26FB321436C320096E546 /* LaunchScreen.storyboard in Resources */,
 				2F36ACF72143E992003DB8E0 /* 扩展Color介绍.txt in Resources */,
 				2FB26FB021436C320096E546 /* Assets.xcassets in Resources */,
+				C737B858267F1794007A4D21 /* 扩展String-数字计算.txt in Resources */,
 				2F36ACEF2143E723003DB8E0 /* 扩展String介绍.txt in Resources */,
 				2F36ACFB2143E992003DB8E0 /* 扩展UINavigationBar介绍.txt in Resources */,
 				2FB26FAE21436C2F0096E546 /* Main.storyboard in Resources */,
 				2F36ACFC2143E992003DB8E0 /* 扩展UIImage介绍.txt in Resources */,
 				2F36ACF82143E992003DB8E0 /* 扩展UIView介绍.txt in Resources */,
 				2F36ACFD2143E992003DB8E0 /* 扩展UITextField介绍.txt in Resources */,
+				C737B85B267F61BE007A4D21 /* NumberValue.txt in Resources */,
 				2F36ACFA2143E992003DB8E0 /* 扩展Double介绍.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,31 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FFCD0B241F9ADA00802328 /* CommonlyNumber.swift in Sources */,
 				2FB26FAB21436C2F0096E546 /* ViewController.swift in Sources */,
-				C729C96222C4CD1400BB365A /* Extension-Date.swift in Sources */,
-				C711E7AB2442BC21000CC921 /* Extension-UIButton.swift in Sources */,
-				2FB26FCB214376680096E546 /* Extension-Color.swift in Sources */,
-				2FB26FC7214376680096E546 /* Extension-UIImage.swift in Sources */,
-				C71BDD1324DC127400CCADB8 /* Extension-Dispatch-Queue.swift in Sources */,
-				C729C95E22C4790C00BB365A /* Extension-Range.swift in Sources */,
-				2FB26FD22143789F0096E546 /* Extension-Array.swift in Sources */,
-				2FB26FCD214376680096E546 /* Extension-UIView.swift in Sources */,
 				2FB26FA921436C2F0096E546 /* AppDelegate.swift in Sources */,
-				2FB26FC6214376680096E546 /* Extension-String.swift in Sources */,
-				C7790E2E24221110001A5900 /* Extension-Double.swift in Sources */,
-				C74740F324304F080008FBBD /* EXLog.swift in Sources */,
 				C78A338622C50B690048EB09 /* Color.swift in Sources */,
-				2FB26FCA214376680096E546 /* Extension-Double-Operator.swift in Sources */,
-				C7FFCD0D241FAE8600802328 /* Extension-Number-2-String.swift in Sources */,
-				C729C96022C4CAEE00BB365A /* Extension-NSLayoutConstraint.swift in Sources */,
 				2F36ACFF2143EA33003DB8E0 /* DescViewController.swift in Sources */,
-				C71BDD0F24DC0F6D00CCADB8 /* Extension-UILabel.swift in Sources */,
-				C7FFCD09241F971E00802328 /* Extension-String-2-Number.swift in Sources */,
-				2FB26FC9214376680096E546 /* Extension-UINavigationBar.swift in Sources */,
-				C7790E3024222CFE001A5900 /* Extension-String-Operator.swift in Sources */,
-				2FB26FD0214376680096E546 /* Extension-UITextField.swift in Sources */,
-				C729C96422C4EF1A00BB365A /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

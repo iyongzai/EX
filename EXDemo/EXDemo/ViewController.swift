@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EX
 
 fileprivate let CellReuseIdentifier = "CellReuseIdentifier"
 class ViewController: UIViewController {

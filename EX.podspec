@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EX"
-  s.version      = "0.5.3"
+  s.version      = "0.5.4"
   s.summary      = "EX是一个对系统类进行扩展的工具开源库，针对String，Array，Double，UIImage，UIView等类扩展了一些常用的方法"
 
   # This description is used to generate tags and improve search results.
@@ -138,5 +138,35 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   #s.dependency "SnapKit"
+  
+  
+  # UIKit
+  s.subspec 'EX-UIKit' do |exUIKitS|
+    exUIKitS.source_files = 'Extension/EX-UIKit/*.{swift,h,m}'
+    exUIKitS.subspec 'UIKitSetAPI' do |setAPIS|
+      setAPIS.source_files = 'Extension/EX-UIKit/UIKitSetAPI/*.{swift,h,m}'
+      setAPIS.frameworks = "UIKit"
+    end
+    exUIKitS.subspec 'AddSubview' do |addSubviewS|
+      addSubviewS.source_files = 'Extension/EX-UIKit/AddSubview/*.{swift,h,m}'
+      addSubviewS.frameworks = "UIKit"
+    end
+  end
+  # Foundation
+  s.subspec 'EX-Foundation' do |exFoundationS|
+    exFoundationS.source_files = 'Extension/EX-Foundation/*.{swift,h,m}'
+    exFoundationS.subspec 'Collection' do |collectionS|
+      collectionS.source_files = 'Extension/EX-Foundation/Collection/*.{swift,h,m}'
+    end
+    exFoundationS.subspec 'Date' do |dateS|
+      dateS.source_files = 'Extension/EX-Foundation/Date/*.{swift,h,m}'
+    end
+    exFoundationS.subspec 'Number' do |numberS|
+      numberS.source_files = 'Extension/EX-Foundation/Number/*.{swift,h,m}'
+    end
+    exFoundationS.subspec 'String' do |stringS|
+      stringS.source_files = 'Extension/EX-Foundation/String/*.{swift,h,m}'
+    end
+  end
 
 end
